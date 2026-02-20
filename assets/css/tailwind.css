@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Global font family */
+  body {
+    font-family: 'Onest', sans-serif;
+  }
+}
+
+@layer components {
+  /* Typography utility classes matching client requirements */
+  .h1-headline {
+    @apply text-h1 text-lemon font-black;
+  }
+  
+  .h2-headline {
+    @apply text-h2 text-midnight-blue font-bold;
+  }
+  
+  .h3-headline {
+    @apply text-h3 text-lemon font-bold;
+  }
+  
+  .h4-headline {
+    @apply text-h4 text-midnight font-bold;
+  }
+  
+  .h5-headline {
+    @apply text-h5 text-midnight font-bold;
+  }
+  
+  .copytext {
+    font-size: 21px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Onest', sans-serif;
+    @apply text-midnight-blue;
+  }
+  .copytext-paragraph {
+    font-size: 21px;
+    line-height: 2;
+    font-weight: 400;
+    font-family: 'Onest', sans-serif;
+    @apply text-midnight-blue;
+  }
+}

@@ -1,0 +1,120 @@
+<template>
+    <div class="relative min-h-screen bg-midnight-blue pb-4">
+        <!-- Header -->
+        <AppHeader />
+
+        <!-- Hero Section -->
+        <section class="relative z-10 h-[95vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
+            backgroundImage: `url('/kaenguruh_statue_of_a_female_goddess_Diane_in_grayscale_acces_ff9b84ff-8760-4949-845b-4ff269894494_1.png')`
+        }">
+            <!-- White Overlay -->
+            <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->
+
+            <!-- Content -->
+            <div class="relative z-10 lg:pl-24 p-3 w-full pt-20 h-full ">
+                <div class=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full ">
+                    <!-- Left Section: Title -->
+                    <div class="space-y-6">
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
+                            <span class="text-lemon">GOVERNANCE<br />
+                                BEGINNT NICHT <br>MIT REGELN. <br>SONDERN MIT</span><span class="text-midnight-blue">
+                                HALTUNG.</span>
+
+                        </h1>
+                    </div>
+
+                    <!-- Right Section: BRYTEGATE Card -->
+                    <div class="flex justify-center lg:justify-end  h-full items-end">
+                        <div>
+                            <BryteGateCard />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aufgabe Content Section -->
+        <GovernanceContentSection />
+
+
+
+
+        <!-- Main Content -->
+        <main class="relative z-10">
+            <div class="w-full -mt-4 px-8 md:px-16 lg:px-24  pt-24 pb-60 leading-relaxed bg-cover bg-no-repeat bg-[right_top_30%]"
+                :style="{
+                    backgroundImage: `url('/ocean8.png')`
+                }">
+                <h2 class="text-2xl md:text-3xl lg:text-[100px] lg:leading-[1.2] lg:font-[800]  max-w-5xl ">
+                    <span class="text-olive-gold">KONTROLLE IST KEIN MISSTRAUEN.
+                        SIE IST DIE
+                        VORAUSSETZUNG FÜR </span> <span class="text-clean-white">VERTRAUEN.</span>
+                </h2>
+            </div>
+
+            <!-- Supervisory Board Section -->
+            <SupervisoryBoardSection />
+
+            <div class=" md:min-h-[80vh] px-8 md:px-16 lg:px-24    pt-24 pb-60 leading-relaxed ">
+                <h2 class="text-2xl md:text-3xl lg:text-[100px] lg:leading-[1.2] lg:font-[800]  font-[800] text-lomon ">
+                    <span class="text-lemon">STRUKTUR IST KEIN <br>SELBSTZWECK,<br> SONDERN DIE <br>VORAUSSETZUNG FÜR
+                        VERTRAUEN®</span>
+                </h2>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="bg-clean-white rounded-t-2xl py-20 px-4 relative  p-2">
+                <div class="container mx-auto">
+                    <div class="flex flex-col md:flex-row gap-12 md:items-start justify-between">
+                        <!-- Left: Image with Triangle Overlay (overlapping from above) -->
+                        <div class="relative  w-full md:w-[60%]  p-2">
+                            <!-- Statue Image (extends into first section) -->
+                            <div class="relative hidden lg:block lg:-mt-[30%] w-full ">
+                                <img :src="statueImage" alt="Greek statue"
+                                    class="min-h-[700px] w-full object-cover relative z-10" />
+                                <!-- Large Triangle Overlay -->
+
+                            </div>
+                        </div>
+
+                        <!-- Right: Text and Button -->
+                        <div class="space-y-6 md:text-end ">
+                            <h5 class="text-h5 md:text-end text-midnight-blue">
+                                Wir sind Europas<br />
+                                Powerhouse für<br />
+                                eine sichere<br />
+                                digitale Zukunft.
+                            </h5>
+                            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Section -->
+            <div class="relative z-20 rounded-b-2xl bg-clean-white overflow-hidden">
+                <TeamSection />
+            </div>
+
+            <!-- Contact Section -->
+            <div class="relative z-10 -m-10">
+                <ContactSection />
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <AppFooter />
+    </div>
+</template>
+
+<script setup>
+import AllianceContentSection from '~/components/AllianceContentSection.vue';
+import GovernanceContentSection from '~/components/GovernanceContentSection.vue';
+const statueImage = '/greeknobg.png'
+
+const handleButtonClick = () => {
+    // Handle button click - can emit event or navigate
+    console.log('Termin vereinbaren clicked')
+}
+// Aufgabe page - Team and Contact sections
+</script>
