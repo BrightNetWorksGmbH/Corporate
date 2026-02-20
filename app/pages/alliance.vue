@@ -12,9 +12,9 @@
 
             <!-- Content -->
             <div class="relative z-10 lg:pl-16 p-3 w-full pt-20 h-full ">
-                <div class=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full ">
+                <div class=" grid grid-cols-1 lg:grid-cols-3 gap-12 items-center h-full ">
                     <!-- Left Section: Title -->
-                    <div class="space-y-6 h-full flex flex-col justify-center items-start">
+                    <div class="space-y-6 h-full flex flex-col justify-center items-start lg:col-span-2">
                         <h1
                             class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
                             <span class="text-lemon">ZUGANG<br />
@@ -24,7 +24,7 @@
                     </div>
 
                     <!-- Right Section: BRYTEGATE Card -->
-                    <div class="flex justify-center lg:justify-end  h-full items-end">
+                    <div class="flex justify-center lg:justify-end  h-full items-end lg:col-span-1">
                         <div>
                             <BryteGateCard />
                         </div>
@@ -83,7 +83,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div class="relative z-10 -m-10">
+            <div id="contact-section" class="relative z-10 -m-10">
                 <ContactSection />
             </div>
         </main>
@@ -98,7 +98,10 @@ import AllianceContentSection from '~/components/AllianceContentSection.vue';
 const statueImage = '/greeknobg.png'
 
 const handleButtonClick = () => {
-    console.log('Termin vereinbaren clicked')
+    const contactSection = document.getElementById('contact-section')
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 }
 // Aufgabe page - Team and Contact sections
 </script>

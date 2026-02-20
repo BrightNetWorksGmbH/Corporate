@@ -11,13 +11,12 @@
             <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->
 
             <!-- Content -->
-            <div class="relative z-10 lg:pl-24 p-3 w-full pt-20 h-full ">
-                <div class=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full ">
+            <div class="relative z-10 lg:pl-16 p-3 w-full pt-20 h-full ">
+                <div class=" grid grid-cols-1 lg:grid-cols-3 gap-8 items-center h-full ">
                     <!-- Left Section: Title -->
-                    <div class="space-y-6">
-                        <h1
-                            class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
-                            <span class="text-lemon">GOVERNANCE<br />
+                    <div class="space-y-6 lg:col-span-2">
+                        <h1 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
+                            <span class="text-lemon">GOVERNANCE
                                 BEGINNT NICHT <br>MIT REGELN. <br>SONDERN MIT</span><span class="text-midnight-blue">
                                 HALTUNG.</span>
 
@@ -25,7 +24,7 @@
                     </div>
 
                     <!-- Right Section: BRYTEGATE Card -->
-                    <div class="flex justify-center lg:justify-end  h-full items-end">
+                    <div class="flex justify-center lg:justify-end h-full items-end lg:col-span-1">
                         <div>
                             <BryteGateCard />
                         </div>
@@ -97,7 +96,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div class="relative z-10 -m-10">
+            <div id="contact-section" class="relative z-10 -m-10">
                 <ContactSection />
             </div>
         </main>
@@ -113,8 +112,10 @@ import GovernanceContentSection from '~/components/GovernanceContentSection.vue'
 const statueImage = '/greeknobg.png'
 
 const handleButtonClick = () => {
-    // Handle button click - can emit event or navigate
-    console.log('Termin vereinbaren clicked')
+    const contactSection = document.getElementById('contact-section')
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 }
 // Aufgabe page - Team and Contact sections
 </script>

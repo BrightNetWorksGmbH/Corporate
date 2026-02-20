@@ -16,19 +16,19 @@
 
     <!-- Token Input and Submit Button -->
     <div 
-      class="flex items-center mb-6  transition-all border-clean-white rounded-l-2xl"
+      class="flex items-center mb-6  transition-all  rounded-l-2xl  overflow-hidden"
       
     >
       <input
         v-model="token"
         type="text"
         placeholder="Type in Token"
-        class="flex-1 py-2 px-10 h-full w-1/2 bg-black text-clean-white placeholder-gray-400 focus:outline-none  border-white transition-all   "
+        class="flex-1 py-[6px] px-10 h-full w-1/2 bg-black text-clean-white placeholder-gray-400 focus:outline-none  border-gray-500 transition-all rounded-l-2xl border"
       />
       <button
         @click="handleSubmit"
         :disabled="!hasText"
-        class="px-10  font-bold transition-all whitespace-nowrap w-1/2"
+        class="px-10 h-full font-bold transition-all whitespace-nowrap w-1/2"
         :class="buttonClasses"
       >
         SUBMIT
@@ -75,19 +75,19 @@ const containerBorderClass = computed(() => {
 // Button classes
 const buttonClasses = computed(() => {
   // State 1: Initial (UP) - lemon-yellow background, midnight-blue text, no border
-  if (!hasText.value && !isScrolled.value) {
+  if (!hasText.value ) {
     return 'bg-lemon border-[5px] border-lemon text-midnight-blue border-0'
   }
   
   // State 2: When typing (OVER) - clean-white background, midnight-blue text, lemon-yellow border
-  if (hasText.value && !isScrolled.value) {
+  if (hasText.value ) {
     return 'bg-clean-white border-[5px] border-clean-white text-midnight-blue border-[5px] border-lemon'
   }
   
   // State 3: When scrolled (DOWN) - midnight-blue background, clean-white text, clean-white border
-  if (isScrolled.value) {
-    return 'bg-midnight-blue text-clean-white border-[5px] border-2 border-midnight-blue'
-  }
+  // if (isScrolled.value) {
+  //   return 'bg-midnight-blue text-clean-white border-[5px] border-2 border-midnight-blue'
+  // }
   
   // Default fallback
   return 'bg-lemon text-midnight-blue border-[5px] border-lemon'

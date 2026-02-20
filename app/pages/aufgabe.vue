@@ -12,9 +12,9 @@
 
             <!-- Content -->
             <div class="relative z-10 lg:pl-16 p-3 w-full py-20 h-full ">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full ">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center h-full ">
                     <!-- Left Section: Title -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 lg:col-span-2">
                         <h1
                             class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
                             <span class="text-lemon">A NEW ERA<br />
@@ -26,7 +26,7 @@
                     </div>
 
                     <!-- Right Section: BRYTEGATE Card -->
-                    <div class="flex justify-center lg:justify-end  h-full items-end">
+                    <div class="flex justify-center lg:justify-end  h-full items-end lg:col-span-1">
                         <div>
                             <BryteGateCard />
                         </div>
@@ -90,7 +90,9 @@
             </div>
 
             <!-- Contact Section -->
-            <ContactSection />
+            <div id="contact-section">
+                <ContactSection />
+            </div>
         </main>
 
         <!-- Footer -->

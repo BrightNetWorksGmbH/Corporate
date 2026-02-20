@@ -12,9 +12,9 @@
 
             <!-- Content -->
             <div class="relative z-10 lg:pl-16 p-3 w-full pt-20 h-full ">
-                <div class="h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+                <div class="h-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center ">
                     <!-- Left Section: Title -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 lg:col-span-2">
                         <h1
                             class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
                             <span class="text-lemon">DIGITALE<br />
@@ -25,7 +25,7 @@
                     </div>
 
                     <!-- Right Section: BRYTEGATE Card -->
-                    <div class="flex justify-center lg:justify-end  h-full items-end">
+                    <div class="flex justify-center lg:justify-end  h-full items-end lg:col-span-1">
                         <div>
                             <BryteGateCard />
                         </div>
@@ -84,7 +84,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div class="relative z-10 -m-10">
+            <div id="contact-section" class="relative z-10 -m-10">
                 <ContactSection />
             </div>
         </main>
@@ -100,7 +100,10 @@ import DigitalAutonomy from '~/components/DigitalAutonomy.vue';
 const statueImage = '/greeknobg.png'
 
 const handleButtonClick = () => {
-    console.log('Termin vereinbaren clicked')
+    const contactSection = document.getElementById('contact-section')
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 }
 // Aufgabe page - Team and Contact sections
 </script>

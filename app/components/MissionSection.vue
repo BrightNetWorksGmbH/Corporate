@@ -82,8 +82,9 @@
 const statueImage = '/greeknobg.png'
 
 const handleButtonClick = () => {
-  // Emit event to parent or handle click
-  console.log('Button clicked - Termin vereinbaren')
-  // You can emit an event: emit('appointment-clicked')
+  const contactSection = document.getElementById('contact-section')
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 </script>

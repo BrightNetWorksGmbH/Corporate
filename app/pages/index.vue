@@ -75,7 +75,7 @@
    
 
     <!-- Contact Section -->
-    <div class="relative z-10 -m-10 ">
+    <div id="contact-section" class="relative z-10 -m-10 ">
       <ContactSection />
     </div>
     <AppFooter />

@@ -124,7 +124,9 @@
 
 <script setup>
 const handleButtonClick = () => {
-  // Handle button click - can emit event or navigate
-  console.log('Termin vereinbaren clicked')
+  const contactSection = document.getElementById('contact-section')
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 </script>

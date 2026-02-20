@@ -93,9 +93,9 @@
 
 
                 <!-- Bottom: Three Data Type Sections -->
-                <div class="relative  border-gray-400 mt-5 ">
+                <div class=" relative  border-gray-400 mt-5 ">
                     <!-- SVG Connecting Lines -->
-                    <div class="flex justify-between max-w-2xl w-full h-1 mx-auto relative h-30 pl-10">
+                    <div class="hidden lg:block flex justify-between max-w-2xl w-full h-1 mx-auto relative h-30 pl-10">
                         <div class="flex-1 border-l-2 border-t-2 border-black h-10"></div>
                         <div class="flex-1 border-l-2 border-t-2  border-black h-10"></div>
                         <div class="absolute -top-[40px] right-0 border-r-2  h-[60px] border-black w-1"></div>
@@ -303,7 +303,7 @@ const DeepDataIcon = () => h('div', {
     h('div', {
         class: 'absolute w-full h-0.5 bg-midnight-blue'
     }),
-    h('div', {
+h('div', {
         class: 'absolute w-0.5 h-full bg-midnight-blue'
     })
 ])
@@ -328,8 +328,10 @@ const dataTypes = [
 ]
 
 const handleButtonClick = () => {
-    // Handle button click - can emit event or navigate
-    console.log('Termin vereinbaren clicked')
+    const contactSection = document.getElementById('contact-section')
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 }
 </script>
 
