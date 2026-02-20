@@ -33,18 +33,25 @@
 
         <!-- Submit Button -->
         <div class="flex justify-center">
-          <button type="submit"
-            class="p-6 w-full border-[5px] border-lemon bg-midnight-blue text-clean-white text-3xl tracking-[5px] font-bold hover:bg-opacity-90 transition-colors">
+          <button type="submit" :disabled="isSubmitting"
+            class="p-6 w-full border-[5px] border-lemon bg-midnight-blue text-clean-white text-3xl tracking-[5px] font-bold hover:bg-opacity-90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
             ENQUIRE SAFETY
           </button>
         </div>
+
+        <p v-if="errorMessage" class="text-center text-red-100 text-lg">
+          {{ errorMessage }}
+        </p>
+        <p v-if="successMessage" class="text-center text-clean-white text-lg">
+          {{ successMessage }}
+        </p>
       </form>
     </div>
   
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const formData = ref({
@@ -53,9 +60,29 @@ const formData = ref({
   message: ''
 })
 
-const handleSubmit = () => {
-  console.log('Form submitted:', formData.value)
-  // Handle form submission
-  // You can emit an event or call an API here
+const isSubmitting = ref(false)
+const errorMessage = ref('')
+const successMessage = ref('')
+
+const handleSubmit = async () => {
+  if (isSubmitting.value) return
+
+  isSubmitting.value = true
+  errorMessage.value = ''
+  successMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: formData.value,
+    })
+
+    successMessage.value = 'Thank you. We received your message and will contact you soon.'
+    formData.value = { name: '', email: '', message: '' }
+  } catch (error: any) {
+    errorMessage.value = error?.data?.statusMessage || 'Could not send your message. Please try again.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>

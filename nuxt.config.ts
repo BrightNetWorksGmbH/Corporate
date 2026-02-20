@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
+  runtimeConfig: {
+    mailjetApiKey: '',
+    mailjetSecretKey: '',
+    mailjetFromEmail: '',
+    mailjetFromName: 'BryteArk Website',
+    contactToEmail: 'samuelnegalign2@gmail.com',
+  },
   app: {
     head: {
       link: [
