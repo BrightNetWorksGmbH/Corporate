@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-clean-white px-4 md:px-24 py-20 rounded-b-2xl ">
+  <section class="relative bg-clean-white px-4 md:px-16 py-20 rounded-b-2xl ">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full md:max-w-[90%] items-start">
         <!-- Left Section -->

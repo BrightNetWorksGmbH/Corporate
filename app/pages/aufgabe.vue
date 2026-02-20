@@ -4,7 +4,7 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[110vh] flex items-center bg-cover bg-right bg-no-repeat bg-white" :style="{
+        <section class="relative z-10 h-[105vh]  flex items-center bg-cover bg-right bg-no-repeat bg-white" :style="{
             backgroundImage: `url('/aufbagelanding.png')`
         }">
             <!-- White Overlay -->

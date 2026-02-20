@@ -42,7 +42,7 @@
 
         <!-- Main Content -->
         <main class="relative z-10">
-            <div class="w-full -mt-4 px-8 md:px-16 lg:px-24  pt-24 pb-60 leading-relaxed bg-cover bg-no-repeat bg-[right_top_30%]"
+            <div class="w-full -mt-4 px-8 md:px-16 lg:px-16  pt-24 pb-60 leading-relaxed bg-cover bg-no-repeat bg-[right_top_30%]"
                 :style="{
                     backgroundImage: `url('/ocean8.png')`
                 }">
@@ -56,8 +56,8 @@
             <!-- Supervisory Board Section -->
             <SupervisoryBoardSection />
 
-            <div class=" md:min-h-[80vh] px-8 md:px-16 lg:px-24    pt-24 pb-60 leading-relaxed ">
-                <h2 class="text-2xl md:text-3xl lg:text-[100px] lg:leading-[1.2] lg:font-[800]  font-[800] text-lomon ">
+            <div class=" md:min-h-[80vh] px-8 md:px-16 lg:px-16    pt-24 pb-60 leading-relaxed ">
+                <h2 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
                     <span class="text-lemon">STRUKTUR IST KEIN <br>SELBSTZWECK,<br> SONDERN DIE <br>VORAUSSETZUNG FÜR
                         VERTRAUEN®</span>
                 </h2>

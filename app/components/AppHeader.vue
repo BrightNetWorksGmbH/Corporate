@@ -19,10 +19,10 @@
 
         <!-- Right: Fingerprint and Menu -->
         <div class="relative flex flex-row items-center gap-4">
-          <div class="flex flex-row items-center gap-1 cursor-pointer bg-white" @click.stop="toggleMenu">
+          <div class="flex flex-row items-center gap-1 cursor-pointer " @click.stop="toggleMenu">
             <img src="/common/menuDark.svg" alt="Menu" class="w-10 h-10" />
             <p
-              class="text-midnight right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
+              class="right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
               MENU
             </p>
           </div>

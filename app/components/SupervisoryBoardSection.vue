@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-clean-white rounded-2xl py-20 px-8 md:px-16 lg:px-24">
+  <section class="bg-clean-white rounded-2xl py-20 px-8 md:px-16 lg:px-16">
     <div class="container mx-auto">
       <!-- Title -->
       <h2 class="text-3xl max-md:font-bold md:text-h2 text-midnight-blue mb-12 text-center lg:text-left">

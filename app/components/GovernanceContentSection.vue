@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-clean-white py-20 relative  z-20 px-4 md:px-24 rounded-b-2xl">
+    <section class="bg-clean-white py-20 relative  z-20 px-4 md:px-16 rounded-b-2xl">
         <div class="container mx-auto">
             <!-- Title with Mixed Colors -->
 

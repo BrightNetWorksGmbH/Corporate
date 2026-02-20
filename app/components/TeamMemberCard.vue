@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-start gap-2">
+  <div class="flex flex-col items-start overflow-hidden">
     <!-- Portrait Image -->
     <div class="w-[300px] h-[350px] aspect-square overflow-hidden ">
       <img
