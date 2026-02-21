@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 
 const formData = ref({
   name: '',
@@ -63,13 +63,36 @@ const formData = ref({
 const isSubmitting = ref(false)
 const errorMessage = ref('')
 const successMessage = ref('')
+let messageTimeout: ReturnType<typeof setTimeout> | null = null
+
+const clearMessages = () => {
+  if (messageTimeout) {
+    clearTimeout(messageTimeout)
+    messageTimeout = null
+  }
+  errorMessage.value = ''
+  successMessage.value = ''
+}
+
+const setMessage = (message: string, isError = false) => {
+  clearMessages()
+  
+  if (isError) {
+    errorMessage.value = message
+  } else {
+    successMessage.value = message
+  }
+  
+  messageTimeout = setTimeout(() => {
+    clearMessages()
+  }, 5000)
+}
 
 const handleSubmit = async () => {
   if (isSubmitting.value) return
 
   isSubmitting.value = true
-  errorMessage.value = ''
-  successMessage.value = ''
+  clearMessages()
 
   try {
     await $fetch('/api/contact', {
@@ -77,12 +100,16 @@ const handleSubmit = async () => {
       body: formData.value,
     })
 
-    successMessage.value = 'Thank you. We received your message and will contact you soon.'
+    setMessage('Thank you. We received your message and will contact you soon.')
     formData.value = { name: '', email: '', message: '' }
   } catch (error: any) {
-    errorMessage.value = error?.data?.statusMessage || 'Could not send your message. Please try again.'
+    setMessage(error?.data?.statusMessage || 'Could not send your message. Please try again.', true)
   } finally {
     isSubmitting.value = false
   }
 }
+
+onBeforeUnmount(() => {
+  clearMessages()
+})
 </script>
