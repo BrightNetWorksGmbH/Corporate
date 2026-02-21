@@ -5,7 +5,7 @@ type ContactBody = {
 }
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const DEFAULT_CONTACT_TO_EMAIL = 'samuelnegalign2@gmail.com'
+const DEFAULT_VERIFIED_EMAIL = 'samuelnegalign2@gmail.com'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event)
@@ -27,11 +27,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Message is too long.' })
   }
 
-  if (!config.mailjetApiKey || !config.mailjetSecretKey || !config.mailjetFromEmail) {
+  if (!config.mailjetApiKey || !config.mailjetSecretKey) {
     throw createError({ statusCode: 500, statusMessage: 'Email service is not configured.' })
   }
 
-  const recipientEmail = config.contactToEmail || DEFAULT_CONTACT_TO_EMAIL
+  const verifiedEmail = config.contactToEmail || DEFAULT_VERIFIED_EMAIL
 
   try {
     const { default: Mailjet } = await import('node-mailjet')
@@ -62,12 +62,12 @@ export default defineEventHandler(async (event) => {
       Messages: [
         {
           From: {
-            Email: config.mailjetFromEmail,
-            Name: config.mailjetFromName,
+            Email: verifiedEmail,
+            Name: 'BryteArk Website',
           },
           To: [
             {
-              Email: recipientEmail,
+              Email: verifiedEmail,
               Name: 'BryteArk Contact',
             },
           ],

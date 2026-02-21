@@ -6,9 +6,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mailjetApiKey: '',
     mailjetSecretKey: '',
-    mailjetFromEmail: '',
-    mailjetFromName: 'BryteArk Website',
-    contactToEmail: 'samuelnegalign2@gmail.com',
+    contactToEmail: '',
   },
   app: {
     head: {
