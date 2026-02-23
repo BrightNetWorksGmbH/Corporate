@@ -14,7 +14,7 @@
 
         <!-- Center: BryteArk Logo -->
         <div class="flex flex-col items-center">
-          <img src="/common/bryteArkDark.svg" alt="BryteArk Logo" class="h-16 md:h-28" />
+          <img src="/common/mainLogo.svg" alt="BryteArk Logo" class="h-16 md:h-28" />
         </div>
 
         <!-- Right: Fingerprint and Menu -->
