@@ -95,7 +95,7 @@
                 <!-- Bottom: Three Data Type Sections -->
                 <div class=" relative  border-gray-400 mt-5 ">
                     <!-- SVG Connecting Lines -->
-                    <div class="hidden lg:block flex justify-between max-w-2xl w-full h-1 mx-auto relative h-30 pl-10">
+                    <div class="hidden lg:flex justify-between max-w-2xl w-full h-1 mx-auto relative h-30 pl-10 ">
                         <div class="flex-1 border-l-2 border-t-2 border-black h-10"></div>
                         <div class="flex-1 border-l-2 border-t-2  border-black h-10"></div>
                         <div class="absolute -top-[40px] right-0 border-r-2  h-[60px] border-black w-1"></div>

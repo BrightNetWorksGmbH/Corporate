@@ -6,7 +6,7 @@
         <!-- Hero Section -->
         <section class="relative z-10 h-[95vh] py-5  flex items-center bg-contain bg-right bg-no-repeat bg-white"
             :style="{
-                backgroundImage: `url('/alliancelanding.png')`
+                backgroundImage: `url('/ship3.png')`
             }">
             <!-- White Overlay -->
             <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->

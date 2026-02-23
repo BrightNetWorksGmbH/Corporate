@@ -23,7 +23,7 @@
       <div class="container mx-auto text-center pt-10 relative ">
         <!-- White Border Inverted Triangle SVG -->
         <div class="flex flex-col items-center">
-          <img src="/common/whitedonwarrow.svg" alt="EU Flag" class="w-32 h-32 mb-3" />
+          <img src="/white-icons/frontofsculpture.svg" alt="EU Flag" class="w-32 h-32 mb-3" />
           <h4 class="text-h5 text-clean-white  leading-[50px] tracking-wide ">
             Wir schaffen Resilienz. <br>Autonome Daten für eine autonome Ökonomie –<br />
             entwickelt mit Integrität, Ethik und Exzellenz.
