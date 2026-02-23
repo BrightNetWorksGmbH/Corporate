@@ -58,7 +58,7 @@
             <div class=" md:min-h-[80vh] px-8 md:px-16 lg:px-16    pt-24 pb-60 leading-relaxed ">
                 <h2 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
                     <span class="text-lemon">STRUKTUR IST KEIN <br>SELBSTZWECK,<br> SONDERN DIE <br>VORAUSSETZUNG FÜR
-                        VERTRAUEN®</span>
+                        VERTRAUEN.</span>
                 </h2>
             </div>
 
