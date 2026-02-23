@@ -6,18 +6,8 @@
         <div class="space-y-6 h-full  flex flex-col justify-center items-start">
           <!-- Icon -->
           <div class="w-full flex items-center justify-center">
-            <div class="w-12 h-12 flex items-center justify-center">
-            <div class="grid grid-cols-5 gap-1">
-              <template v-for="row in 5" :key="row">
-                <template v-for="col in 5" :key="col">
-                  <div
-                    v-if="!((row === 1 && col === 1) || (row === 5 && col === 5))"
-                    class="w-2 h-2 bg-midnight-blue rounded-sm"
-                  ></div>
-                  <div v-else class="w-2 h-2"></div>
-                </template>
-              </template>
-            </div>
+            <div class="w-20 h-20 flex items-center justify-center">
+            <img src="/common/triangle.svg" alt="EU Flag" class="w-20 h-20" />
           </div>
           </div>
 
@@ -48,22 +38,10 @@
               v-for="link in navigationLinks"
               :key="link.href"
               :href="link.href"
-              class="flex items-center  text-lg md:text-2xl leading-relaxed gap-5 space-y-5 text-midnight-blue hover:text-opacity-80 transition-colors group"
+              class="flex justify-start items-center  text-lg md:text-2xl leading-relaxed gap-3  text-midnight-blue hover:text-opacity-80 transition-colors group"
             >
               <!-- Triangle Icon -->
-              <svg
-                class="w-4 h-4 text-midnight-blue flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <img src="/common/bulletright.svg" alt="link icons" class="w-6 h-6" />
               <!-- Underlined Text -->
               <span class="underline">{{ link.text }}</span>
             </a>

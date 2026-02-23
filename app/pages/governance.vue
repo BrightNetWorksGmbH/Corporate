@@ -63,33 +63,7 @@
             </div>
 
             <!-- Mission Section -->
-            <div class="bg-clean-white rounded-t-2xl py-20 px-4 relative  p-2">
-                <div class="container mx-auto">
-                    <div class="flex flex-col md:flex-row gap-12 md:items-start justify-between">
-                        <!-- Left: Image with Triangle Overlay (overlapping from above) -->
-                        <div class="relative  w-full md:w-[60%]  p-2">
-                            <!-- Statue Image (extends into first section) -->
-                            <div class="relative hidden lg:block lg:-mt-[30%] w-full ">
-                                <img :src="statueImage" alt="Greek statue"
-                                    class="min-h-[700px] w-full object-cover relative z-10" />
-                                <!-- Large Triangle Overlay -->
-
-                            </div>
-                        </div>
-
-                        <!-- Right: Text and Button -->
-                        <div class="space-y-6 md:text-end ">
-                            <h5 class="text-h5 md:text-end text-midnight-blue">
-                                Wir sind Europas<br />
-                                Powerhouse für<br />
-                                eine sichere<br />
-                                digitale Zukunft.
-                            </h5>
-                            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <StatueWithTextSection container-height-class="h-[50vh] md:min-h-[90vh]" />
             <!-- Team Section -->
             <div class="relative z-20 rounded-b-2xl bg-clean-white overflow-hidden">
                 <TeamSection />
@@ -107,15 +81,6 @@
 </template>
 
 <script setup>
-import AllianceContentSection from '~/components/AllianceContentSection.vue';
 import GovernanceContentSection from '~/components/GovernanceContentSection.vue';
-const statueImage = '/greeknobg.png'
-
-const handleButtonClick = () => {
-    const contactSection = document.getElementById('contact-section')
-    if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-}
-// Aufgabe page - Team and Contact sections
+// StatueWithTextSection component handles the statue image and text section
 </script>

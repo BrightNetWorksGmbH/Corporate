@@ -4,9 +4,10 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[95vh] py-5  flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
-            backgroundImage: `url('/alliancelanding.png')`
-        }">
+        <section class="relative z-10 h-[95vh] py-5  flex items-center bg-contain bg-right bg-no-repeat bg-white"
+            :style="{
+                backgroundImage: `url('/alliancelanding.png')`
+            }">
             <!-- White Overlay -->
             <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->
 
@@ -15,10 +16,10 @@
                 <div class=" grid grid-cols-1 lg:grid-cols-3 gap-12 items-center h-full ">
                     <!-- Left Section: Title -->
                     <div class="space-y-6 h-full flex flex-col justify-center items-start lg:col-span-2">
-                        <h1
-                            class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
+                        <h1 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
                             <span class="text-lemon">ZUGANG<br />
-                                ENTSTEHT NICHT <br>DURCH KAUF, <br>SONDERN DURCH</span><span class="text-midnight-blue"> VERANTWORTUNG.</span>
+                                ENTSTEHT NICHT <br>DURCH KAUF, <br>SONDERN DURCH</span><span class="text-midnight-blue">
+                                VERANTWORTUNG.</span>
 
                         </h1>
                     </div>
@@ -50,33 +51,7 @@
             </div>
 
             <!-- Mission Section -->
-            <div class="bg-clean-white rounded-t-2xl py-20 px-4 relative  p-2">
-                <div class="container mx-auto">
-                    <div class="flex flex-col md:flex-row gap-12 md:items-start justify-between">
-                        <!-- Left: Image with Triangle Overlay (overlapping from above) -->
-                        <div class="relative  w-full md:w-[60%]  p-2">
-                            <!-- Statue Image (extends into first section) -->
-                            <div class="relative hidden lg:block lg:-mt-[30%] w-full ">
-                                <img :src="statueImage" alt="Greek statue"
-                                    class="min-h-[700px] w-full object-cover relative z-10" />
-                                <!-- Large Triangle Overlay -->
-
-                            </div>
-                        </div>
-
-                        <!-- Right: Text and Button -->
-                        <div class="space-y-6 ">
-                            <h5 class="text-h5 md:text-end text-midnight-blue">
-                                Wir sind Europas<br />
-                                Powerhouse für<br />
-                                eine sichere<br />
-                                digitale Zukunft.
-                            </h5>
-                            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <StatueWithTextSection container-height-class="h-[50vh] md:min-h-[90vh]" />
             <!-- Team Section -->
             <div class="relative z-20 rounded-b-2xl bg-clean-white overflow-hidden">
                 <TeamSection />
@@ -95,13 +70,5 @@
 
 <script setup>
 import AllianceContentSection from '~/components/AllianceContentSection.vue';
-const statueImage = '/greeknobg.png'
-
-const handleButtonClick = () => {
-    const contactSection = document.getElementById('contact-section')
-    if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-}
-// Aufgabe page - Team and Contact sections
+// StatueWithTextSection component handles the statue image and text section
 </script>

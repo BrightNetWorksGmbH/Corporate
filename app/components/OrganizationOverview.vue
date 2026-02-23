@@ -172,25 +172,21 @@
 
 
 
-                   <div class="flex flex-col md:flex-row  justify-start items-center space-x-8">
-                     <!-- Understand More Link -->
-                     <a href="#"
-                        class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
-                        <!-- Downward Triangle Icon -->
-                        <svg class="w-4 h-4 text-midnight-blue flex-shrink-0 transform group-hover:translate-y-1 transition-transform"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                        <!-- Underlined Text -->
-                        <span class="underline font-bold">Understand more</span>
-                    </a>
+                    <div class="flex flex-col md:flex-row  justify-start items-center space-x-8">
+                        <!-- Understand More Link -->
+                        <a href="#"
+                            class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
+                            <!-- Downward Triangle Icon -->
+                            <img src="/common/downarrow.svg" alt="link icons" class="w-6 h-6" />
+                            <!-- Underlined Text -->
+                            <span class="underline font-bold">Understand more</span>
+                        </a>
 
-                    <!-- Button -->
-                    <div class="pt-4">
-                        <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+                        <!-- Button -->
+                        <div class="pt-4">
+                            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+                        </div>
                     </div>
-                   </div>
                 </div>
             </div>
 
@@ -303,7 +299,7 @@ const DeepDataIcon = () => h('div', {
     h('div', {
         class: 'absolute w-full h-0.5 bg-midnight-blue'
     }),
-h('div', {
+    h('div', {
         class: 'absolute w-0.5 h-full bg-midnight-blue'
     })
 ])

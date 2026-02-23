@@ -25,10 +25,7 @@
               </p>
               <!-- Inverted Triangle SVG -->
               <div class="mt-6 flex justify-center w-full ">
-                <svg class="w-28 h-24 text-black" fill="none" stroke="currentColor" stroke-width="1"
-                  viewBox="0 0 24 24">
-                  <path d="M12 20L4 4h16L12 20z" />
-                </svg>
+                <img src="/common/downarrow.svg" alt="EU Flag" class="w-28 h-24" />
               </div>
             </div>
 

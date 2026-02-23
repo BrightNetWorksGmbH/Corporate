@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
         <!-- Left: EU Logo with texts -->
-        <div class="flex items-center justify-center gap-3">
+        <div class="hidden md:flex items-center justify-center gap-3">
           <img src="/common/euflag.svg" alt="EU Flag" class="w-12 h-12" />
           <p class="text-[10px] font-semibold text-blueish-gray">
             Connection established via BryteGate.
@@ -14,13 +14,14 @@
 
         <!-- Center: BryteArk Logo -->
         <div class="flex flex-col items-center">
-          <img src="/common/bryteArkDark.svg" alt="BryteArk Logo" class="h-28" />
+          <img src="/common/bryteArkDark.svg" alt="BryteArk Logo" class="h-16 md:h-28" />
         </div>
 
         <!-- Right: Fingerprint and Menu -->
         <div class="relative flex flex-row items-center gap-4">
+          <img src="/common/finterprintmark.svg" alt="Menu" class="w-12 h-12" />
           <div class="flex flex-row items-center gap-1 cursor-pointer" @click.stop="toggleMenu">
-            <img src="/common/menuDark.svg" alt="Menu" class="w-8 h-8" />
+            <img src="/common/menuDark.svg" alt="Menu" class="w-12 h-12" />
             <p
               class="text-midnight right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
               MENU

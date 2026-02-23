@@ -1,6 +1,6 @@
 <template>
   <header class="absolute top-0 left-0 right-0 z-50 w-full">
-    <div class="container mx-auto px-4 py-4">
+    <div class=" px-4 md:px-16 py-4">
       <div class="flex items-center justify-between">
         <!-- Left: EU Logo with texts -->
         <div class="hidden md:flex items-center justify-center gap-3">
@@ -14,13 +14,14 @@
 
         <!-- Center: BryteArk Logo -->
         <div class="flex flex-col items-center">
-          <img src="/common/bryteArkDark.svg" alt="BryteArk Logo" class="h-24" />
+          <img src="/common/bryteArkDark.svg" alt="BryteArk Logo" class="h-16 md:h-24" />
         </div>
 
         <!-- Right: Fingerprint and Menu -->
         <div class="relative flex flex-row items-center gap-4">
+          <img src="/common/finterprintmark.svg" alt="Menu" class="w-12 h-12" />
           <div class="flex flex-row items-center gap-1 cursor-pointer " @click.stop="toggleMenu">
-            <img src="/common/menuDark.svg" alt="Menu" class="w-10 h-10" />
+            <img src="/common/menuDark.svg" alt="Menu" class="w-12 h-12" />
             <p
               class="right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
               MENU
@@ -29,15 +30,12 @@
 
           <!-- Menu Dropdown -->
           <Transition name="menu-fade">
-            <div v-if="isMenuOpen" class="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-[100]">
+            <div v-if="isMenuOpen"
+              class="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-[100]">
               <nav class="py-2">
-                <NuxtLink
-                  v-for="page in pages"
-                  :key="page.path"
-                  :to="page.path"
+                <NuxtLink v-for="page in pages" :key="page.path" :to="page.path"
                   class="flex items-center gap-3 px-5 py-3 text-sm font-semibold text-midnight-blue hover:bg-gray-50 hover:text-lemon transition-colors"
-                  @click="isMenuOpen = false"
-                >
+                  @click="isMenuOpen = false">
                   <span class="w-1.5 h-1.5 rounded-full bg-midnight-blue flex-shrink-0"></span>
                   {{ page.name }}
                 </NuxtLink>

@@ -93,24 +93,7 @@
 
 
 
-          <div class=" flex flex-col md:flex-row items-center ">
-            <!-- Understand More Link -->
-            <a href="#" class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
-              <!-- Downward Triangle Icon -->
-              <svg
-                class="w-4 h-4 text-midnight-blue flex-shrink-0 transform group-hover:translate-y-1 transition-transform"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-              <!-- Underlined Text -->
-              <span class="underline font-bold">Understand more</span>
-            </a>
-
-            <!-- Button -->
-            <div class="pt-4 w-full md:w-auto md:ml-12">
-              <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
-            </div>
-          </div>
+      
         </div>
       </div>
       <h2 class="text-3xl max-md:font-bold md:text-h2 text-lomon max-w-6xl text-lemon text-left">UNSERE ANTWORT IST DIE
