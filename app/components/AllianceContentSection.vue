@@ -22,8 +22,8 @@
               eine doppelte Abhängigkeit:</strong>
           </p>
           <div class="flex flex-col gap-4">
-            <div class="flex items-center ">
-              <div class="flex items-center justify-center  w-6 h-6 ">
+            <div class="flex items-start ">
+              <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
               <span class="text-break whitespace-normal">Der Dienstleister ist abhängig von der
@@ -31,8 +31,8 @@
 
               <!-- <div class="h-4 w-4 bg-lemon rounded-full mr-2"></div>Der Dienstleister ist abhängig von der fortlaufenden Zahlung. -->
             </div>
-            <div class="flex items-center ">
-              <div class="flex items-center justify-center  w-6 h-6 ">
+            <div class="flex items-start ">
+              <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
               <span class="text-break whitespace-normal pl-2">Der Kunde ist abhängig vom Zugang
@@ -62,15 +62,15 @@
             für Kunden - nach:
           </p>
           <div>
-            <div class="flex items-center ">
-              <div class="mb-8 flex items-start justify-center  w-6 h-6 ">
+            <div class="flex items-start ">
+              <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
               <span class="text-break whitespace-normal">vollständigem Zugang zu Quellcode,
                 Architekturen und Forschungsständen</span>
             </div>
             <div class="flex items-center ">
-              <div class="flex items-center justify-center  w-6 h-6 ">
+              <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
               <span class="text-break whitespace-normal">gemeinsamem Wissen statt proprietärer
@@ -78,7 +78,7 @@
 
             </div>
             <div class="flex items-center ">
-              <div class="flex items-center justify-center  w-6 h-6 ">
+              <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
               <span class="text-break whitespace-normal">aktiver Mitgestaltung statt passiver Nutzung</span>
