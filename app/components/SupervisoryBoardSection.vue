@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <!-- Title -->
       <h2 class="text-3xl max-md:font-bold md:text-h2 text-midnight-blue mb-12 text-center lg:text-left">
-        Sichtbare Selbstindung. Unabhängige Kontrolle. 
+        Sichtbare Selbstfindung. Unabhängige Kontrolle.
         <span class="text-lemon">Unser Aufsichtsrat.</span>
       </h2>
 
@@ -24,7 +24,7 @@
             <!-- Supervisory Board Chairman (Middle) -->
             <div class="flex flex-col items-center text-center">
               <img src="/team/stephan.png" alt="Stephan Tomat"
-              class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
+                class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
               <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
               <p class="text-sm text-midnight-blue mb-2">Aufsichtsratvorsitzender</p>
               <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
@@ -33,7 +33,7 @@
             <!-- Supervisory Board Member 3 -->
             <div class="flex flex-col items-center text-center">
               <img src="/team/stephan.png" alt="Stephan Tomat"
-              class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
+                class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
               <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
               <p class="text-sm text-midnight-blue mb-2">Aufsichtsrat</p>
               <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
@@ -49,7 +49,7 @@
         <!-- Board of Directors Chairman (Outside Gray Box) -->
         <div class="flex flex-col items-center text-center">
           <img src="/team/stephan.png" alt="Stephan Tomat"
-          class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
+            class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
           <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
           <p class="text-sm text-midnight-blue mb-2">Vorstandsvorsitzender</p>
           <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>

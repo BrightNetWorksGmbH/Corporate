@@ -28,36 +28,38 @@
                 <!-- Desktop View: Management Box with Department Heads -->
                 <div class="relative  hidden lg:block">
                     <!-- Light Gray Box -->
-                    <div class="bg-gray-200 rounded-[72px] p-8 relative overflow-visible">
+                    <div class="bg-gray-200 rounded-[40px] p-8 relative overflow-visible">
                         <!-- ARKS Label (Vertical) -->
                         <div
-                            class="absolute left-0 top-1/2 transform ml-4 -mt-5  writing-vertical-rl text-midnight-blue font-bold text-sm">
+                            class="absolute left-0 top-1/2 transform ml-4 -mt-5 rotate-180 writing-vertical-rl text-midnight-blue font-bold text-[9px] tracking-[1.5px]">
                             ARKS
                         </div>
 
                         <!-- Department Heads Row (Overflowing outside) -->
-                        <div class="flex justify-evenly items-start gap-6 -mt-20 relative z-10 px-4">
+                        <div class="flex justify-evenly items-start gap-4 -mt-20 relative z-10 px-4">
                             <div v-for="(head, index) in departmentHeads" :key="index"
-                                class="flex flex-col items-center text-center flex-1 max-w-[150px]">
+                                class="flex flex-col items-center text-center flex-1 ">
                                 <!-- Profile Image -->
-                                <img :src="head.imageSrc" :alt="head.name"
-                                    class="w-16 h-16 rounded-full object-cover grayscale mb-2 border-2 border-gray-300" />
-                                <!-- Name -->
-                                <h4 class="text-sm font-bold text-midnight-blue mb-1">{{ head.name }}</h4>
-                                <!-- Position -->
-                                <p class="text-xs text-midnight-blue mb-6">Head of Arc</p>
+                                <div class="flex items-center ">
+                                    <img :src="head.imageSrc" :alt="head.name"
+                                        class="w-16 h-16 rounded-full object-cover grayscale mb-2 border-2 border-gray-300" />
+                                    <!-- Name -->
+                                    <div class="flex flex-col">
+                                        <h4 class="text-sm font-semibold text-midnight-blue mb-1 tracking-[1.5px]">{{ head.name }}</h4>
+                                        <!-- Position -->
+                                        <p class="text-xs text-midnight-blue mb-6">Head of Arc</p>
+
+                                    </div>
+                                </div>
 
                                 <!-- Domain with Icon -->
                                 <div class="flex flex-col items-center mt-auto">
                                     <!-- Upward Triangle Icon -->
-                                    <svg class="w-5 h-5 text-midnight-blue mb-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M12 4L4 20h16L12 4z" />
-                                    </svg>
+                                    <img src="/common/upperarrow.svg" alt="arrow up" class="w-8 h-8 mb-3 text-midnight-blue" />
                                     <!-- Domain Title -->
-                                    <p class="text-xs font-bold text-midnight-blue leading-tight">{{ head.domain }}</p>
+                                    <p class=" font-bold text-midnight-blue leading-tight tracking-[1.3px]">{{ head.domain }}</p>
                                     <!-- Domain Subtitle -->
-                                    <p class="text-xs text-midnight-blue mt-1 leading-tight">{{ head.subtitle }}</p>
+                                    <p class="text-[8px] font-semibold text-darik-blueish-grey tracking-[1.3px] mt-1 leading-tight">{{ head.subtitle }}</p>
                                 </div>
                             </div>
                         </div>
@@ -250,7 +252,7 @@ const departmentHeads = [
     },
     {
         name: 'Verena Menzel',
-        imageSrc: '/team/stephan.png',
+        imageSrc: '/team/verena.png',
         domain: 'STRATEGY & SCIENCE',
         subtitle: 'SCIENCE, INNOVATION, TECHNOLOGY'
     },

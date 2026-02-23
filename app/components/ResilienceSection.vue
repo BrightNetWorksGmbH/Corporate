@@ -59,7 +59,7 @@
 
                     <!-- Subtitle in Midnight Blue -->
                     <h3 class="text-2xl max-md:font-bold md:text-h3 text-midnight-blue leading-relaxed">
-                        Hier um Verantwor- <br>tung zu Tragen.
+                        Hier um Verantwortung zu tragen.
                     </h3>
 
                     <!-- First Paragraph -->

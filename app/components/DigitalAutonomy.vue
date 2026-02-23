@@ -12,25 +12,26 @@
         <div class="space-y-12 md:pr-10">
           <!-- Long Paragraph -->
           <p class="text-midnight-blue ">
-            Sie betrifft öffentliche Institutionen und private Unternehmen
-            gleichermalsen, denn digitale systeme, Datenflusse und technologische Entscheidungen prägen heute zentrale
-            Bereiche von Wirtschaft, Verwaltung und gesellschaftlichem Zusammenleben. Europäische Akteure tragen damit
-            gemeinsame Verantwortung dafür, digitale Handlungen und Artefakte zu schützen, Systeme resilient gegenüber
-            Angriffen zu gestalten und Daten als das zu begreifen, was
-            sie lanost sind: eine strarecische ressource von clobalel
-            Bedeutung. Diese Ressource entfaltet ihren Wert nicht nur in regulierten Märkten und legitimem Handel,
-            sondern auch dort, wo Kontrolle, Transparenz und Verantwortung fehlen.
-            Schwarzmärkte, Missbrauchsszenarien und gezielte Angriffe sind Teil derselben digitalen Realität. Sicherheit
-            bedeutet daher nicht nur Schutz vor Ausfall, sondern den bewussten Umgang mit Macht, Zugriff und
-            Abhängigkeiten.
+            Sie betrifft öffentliche Institutionen und private Unternehmen gleichermaßen, denn digitale Systeme,
+            Datenflüsse und technologische Entscheidungen prägen heute zentrale Bereiche von Wirtschaft, Verwaltung und
+            gesellschaftlichem Zusammenleben. Europäische Akteure tragen damit gemeinsame Verantwortung dafür, digitale
+            Infrastrukturen und Artefakte zu schützen, Systeme resilient gegenüber Angriffen zu gestalten und Daten als
+            das zu begreifen, was sie längst sind: eine strategische Ressource von globaler Bedeutung.
+            Diese Ressource entfaltet ihren Wert nicht nur in regulierten Märkten und legitimem Handel, sondern auch
+            dort, wo Kontrolle, Transparenz und Verantwortung fehlen. Schwarzmärkte, Missbrauchsszenarien und gezielte
+            Angriffe sind Teil derselben digitalen Realität. Sicherheit bedeutet daher nicht nur Schutz vor Ausfall,
+            sondern den bewussten Umgang mit Macht, Zugriff und Abhängigkeiten.
           </p>
 
 
 
           <!-- Second Paragraph -->
           <p class=" text-midnight-blue">
-            Gleichzeitig ist Europas digitale Intrastruktur in weiten Teilen von wenigen globalen Akteuren geprägt,
-            deren Geschäftsmodelle, Vertragsbedingungen und technische
+            Gleichzeitig ist Europas digitale Infrastruktur in weiten Teilen von wenigen globalen Akteuren geprägt,
+            deren Geschäftsmodelle, Vertragsbedingungen und technische Architekturen nicht immer mit europäischen
+            Rechts- und Wertvorstellungen in Einklang stehen. Diese Situation ist historisch gewachsen; sie ist nicht
+            per se illegitim – sie ist jedoch strukturell relevant. Verantwortung und Handlungsspielräume liegen heute
+            vielfach außerhalb des europäischen Gestaltungsraums.
           </p>
         </div>
 
@@ -47,9 +48,8 @@
           </p>
           <p class=" text-midnight-blue">
             Eine zukunftsfähige Antwort darauf liegt weder in Abschottung noch in Konfrontation. Sie liegt in
-            Verantwortungsubernahme. institutioneller Reite und der
-            Fähigkeit, digitale Souveränität so zu gestalten, dass europäische Werte, rechtliche Anforderungen und
-            technolodische Mand ungstanickeit miteinander vereinoa
+            Verantwortungsübernahme, institutioneller Reife und der Fähigkeit, digitale Souveränität so zu gestalten,
+            dass europäische Werte, rechtliche Anforderungen und technologische Unabhängigkeit miteinander vereinbar
             bleiben.
           </p>
 

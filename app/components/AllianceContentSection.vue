@@ -57,7 +57,7 @@
           <p class=" text-midnight-blue mb-10">
             Digitale Resilienz kann nur dort entstehen, wo Autonomie und Selbstbestimmung möglich sind. Wo Systeme
             verstanden, kontrolliert und weiterentwickelt werden können
-            - unabhängig von einzelnen Anbietern oder Vertrags-verhältnissen. Deshalb streben wir für unsere Partner -
+            - unabhängig von einzelnen Anbietern oder Vertragsverhältnissen. Deshalb streben wir für unsere Partner -
             nicht
             für Kunden - nach:
           </p>
