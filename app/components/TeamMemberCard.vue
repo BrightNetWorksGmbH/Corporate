@@ -12,7 +12,7 @@
     <!-- Name and Position -->
     <div class="text-start ">
       <h3 class="text-midnight-blue font-bold   text-2xl">{{ name }}</h3>
-      <p class="text-midnight-blue text-2xl  whitespace-normal mb-1">{{ position }}</p>
+      <p class="text-midnight-blue text-2xl whitespace-nowrap mb-1">{{ position }}</p>
     </div>
 
     <!-- REQUEST DATA Button -->

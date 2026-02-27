@@ -1,9 +1,9 @@
 <template>
   <div class="bg-midnight-blue rounded-[30px] px-16 py-8 shadow-lg   flex flex-col items-center justify-center">
     <!-- Title with Icon -->
-    <div class="flex items-center gap-2 mb-3">
+    <div class="flex items-center gap-2 mb-3  h-6 p-2 overflow-hidden">
       <!-- <h3 class="text-clean-white text-xl font-bold">BRYTEGATE</h3> -->
-       <img src="/common/whitebrytelogo.svg" alt="brytegate" class=" " />
+       <img src="/common/brytegate.svg" alt="brytegate" class="object-contain max-w-[200px]" />
     </div>
 
     <!-- Fingerprint Icon -->
@@ -16,9 +16,9 @@
     <!-- Token Input and Submit Button -->
     <div class="w-full flex items-center mb-3  transition-all  rounded-l-[10px]  overflow-hidden  ">
       <input v-model="token" type="text" placeholder="Type in Token"
-        class="flex-1 py-[8.5px] px-10 h-full w-1/2 bg-black text-clean-white placeholder-clean-white text-[11px] font-semibold focus:outline-none  border-gray-500 transition-all rounded-l-[12px] border" />
+        class="flex-1 py-[9px] px-7 h-full w-[55%] bg-black text-clean-white placeholder-clean-white text-[11px] font-semibold focus:outline-none  border-gray-500 transition-all rounded-l-[12px] border" />
       <button @click="handleSubmit" :disabled="!hasText"
-        class="px-10 h-full font-bold transition-all whitespace-nowrap w-1/2" :class="buttonClasses">
+        class="px-5 h-full font-semibold transition-all whitespace-nowrap w-[45%] text-xs py-1" :class="buttonClasses">
         SUBMIT
       </button>
     </div>
@@ -69,7 +69,7 @@ const buttonClasses = computed(() => {
 
   // State 2: When typing (OVER) - clean-white background, midnight-blue text, lemon-yellow border
   if (hasText.value) {
-    return 'bg-clean-white border-[5px] border-clean-white text-midnight-blue border-[5px] border-lemon'
+    return 'bg-clean-white border-[px] border-clean-white text-midnight-blue border-[5px] border-lemon'
   }
 
   // State 3: When scrolled (DOWN) - midnight-blue background, clean-white text, clean-white border

@@ -24,7 +24,7 @@
             <img
               :src="isMenuOpen ? '/common/pressedMenu.svg' : '/common/menuDark.svg'"
               alt="Menu"
-              class="w-12 h-12"
+              class="w-12 h-12 hover:bg-lemon rounded-full"
             />
             <p
               class="right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
