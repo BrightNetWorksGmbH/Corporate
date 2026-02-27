@@ -4,7 +4,7 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[90vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
+        <section class="relative z-10 min-h-[90vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
             backgroundImage: `url('/kaenguruh_statue_of_a_female_goddess_Diane_in_grayscale_acces_ff9b84ff-8760-4949-845b-4ff269894494_1.png')`
         }">
             <!-- White Overlay -->
