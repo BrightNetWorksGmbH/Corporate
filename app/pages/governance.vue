@@ -4,14 +4,14 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[95vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
+        <section class="relative z-10 h-[90vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
             backgroundImage: `url('/kaenguruh_statue_of_a_female_goddess_Diane_in_grayscale_acces_ff9b84ff-8760-4949-845b-4ff269894494_1.png')`
         }">
             <!-- White Overlay -->
             <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->
 
             <!-- Content -->
-            <div class="relative z-10 lg:pl-16 p-3 w-full pt-20 h-full ">
+            <div class="container relative z-10  py-3 w-full pt-20 h-full ">
                 <div class=" grid grid-cols-1 lg:grid-cols-3 gap-8 items-center h-full ">
                     <!-- Left Section: Title -->
                     <div class="space-y-6 lg:col-span-2">
@@ -43,23 +43,28 @@
         <main class="relative z-10">
             <div class="w-full -mt-4 px-8 md:px-16 lg:px-16  pt-24 pb-60 leading-relaxed bg-cover bg-no-repeat bg-[right_top_30%]"
                 :style="{
-                    backgroundImage: `url('/ocean8.png')`
+                    backgroundImage: `url('/lighthouse.png')`
                 }">
-                <h2 class="text-2xl md:text-3xl lg:text-[100px] lg:leading-[1.2] lg:font-[800]  max-w-5xl ">
-                    <span class="text-olive-gold">KONTROLLE IST KEIN MISSTRAUEN.
-                        SIE IST DIE
-                        VORAUSSETZUNG FÜR </span> <span class="text-clean-white">VERTRAUEN.</span>
-                </h2>
+                <div class="container">
+                    <h2 class="text-2xl md:text-3xl lg:text-[100px] lg:leading-[1.2] lg:font-[800]  max-w-5xl ">
+                        <span class="text-lemon">KONTROLLE IST KEIN MISSTRAUEN.
+                            SIE IST DIE
+                            VORAUSSETZUNG FÜR </span> <span class="text-clean-white">VERTRAUEN.</span>
+                    </h2>
+                </div>
             </div>
 
             <!-- Supervisory Board Section -->
             <SupervisoryBoardSection />
 
             <div class=" md:min-h-[80vh] px-8 md:px-16 lg:px-16    pt-24 pb-60 leading-relaxed ">
-                <h2 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
-                    <span class="text-lemon">STRUKTUR IST KEIN <br>SELBSTZWECK,<br> SONDERN DIE <br>VORAUSSETZUNG FÜR
-                        VERTRAUEN.</span>
-                </h2>
+                <div class="container">
+                    <h2 class="text-2xl  lg:text-[90px] leading-[1.3] tracking-[3px] font-[800] font-sans">
+                        <span class="text-lemon">STRUKTUR IST KEIN <br>SELBSTZWECK,<br> SONDERN DIE <br>VORAUSSETZUNG
+                            FÜR
+                            VERTRAUEN.</span>
+                    </h2>
+                </div>
             </div>
 
             <!-- Mission Section -->
@@ -70,7 +75,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div id="contact-section" class="relative z-10 -m-10">
+            <div id="contact-section" class="relative z-10 -my-10">
                 <ContactSection />
             </div>
         </main>

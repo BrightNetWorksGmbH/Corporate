@@ -1,6 +1,6 @@
 <template>
-    <section class="bg-clean-white rounded-2xl relative z-10 py-20 pl-4">
-        <div class="px-2 md:pl-10 mx-auto">
+    <section class=" bg-clean-white rounded-2xl relative z-10 py-20 pl-4">
+        <div class="container px-2 md:pl-10 mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left Section -->
                 <div class="">
@@ -20,13 +20,7 @@
 
                     <div class="flex flex-col md:flex-row items-center md:gap-12 mt-10">
                         <!-- Understand More Link -->
-                        <a href="#"
-                            class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
-                            <!-- Downward Triangle Icon -->
-                            <img src="/common/downarrow.svg" alt="link icons" class="w-6 h-6" />
-                            <!-- Underlined Text -->
-                            <span class="underline font-bold text-xl leading-relaxed">Understand more</span>
-                        </a>
+                        <UnderstandMoreLink text-class="text-xl leading-relaxed" />
 
                         <!-- Button -->
                         <div class="pt-2 w-full md:w-auto">

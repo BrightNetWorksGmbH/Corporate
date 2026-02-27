@@ -55,12 +55,7 @@
 
 
           <!-- Understand More Link -->
-          <a href="#" class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
-            <!-- Downward Triangle Icon -->
-           <img src="/common/downarrow.svg" alt="link icons" class="w-6 h-6" />
-            <!-- Underlined Text -->
-            <span class="underline font-bold">Understand more</span>
-          </a>
+          <UnderstandMoreLink />
 
           <!-- Button -->
           <div class="pt-4">

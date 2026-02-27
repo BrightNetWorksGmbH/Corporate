@@ -1,7 +1,7 @@
 <template>
   <section class="relative z-20 ">
     <!-- First Part: Dark Blue Background with Centered Content -->
-    <div class="bg-midnight-blue py-20 px-4 mb-5 relative min-h-[90vh]">
+    <div class="bg-midnight-blue py-20 px-4 mb-5 relative lg:min-h-[90vh] 2xl:min-h-[70vh]">
       <!-- Inverted Triangle Icon at Top -->
       <!-- <div class="flex justify-center mb-8">
         <svg
@@ -23,7 +23,7 @@
       <div class="container mx-auto text-center pt-10 relative ">
         <!-- White Border Inverted Triangle SVG -->
         <div class="flex flex-col items-center">
-          <img src="/white-icons/frontofsculpture.svg" alt="EU Flag" class="w-32 h-32 mb-3" />
+          <img src="/white-icons/frontofsculpture.svg" alt="white arrow icon" class="w-32 h-32 mb-3 rotate-180" />
           <h4 class="text-h5 text-clean-white  leading-[50px] tracking-wide ">
             Wir schaffen Resilienz. <br>Autonome Daten für eine autonome Ökonomie –<br />
             entwickelt mit Integrität, Ethik und Exzellenz.

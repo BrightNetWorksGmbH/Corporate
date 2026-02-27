@@ -1,12 +1,12 @@
 <template>
-  <section class="relative py-20 w-full ">
+  <!-- <section class="container relative py-20  w-full flex justify-end"> -->
     <!-- Background Image - Stylized head illustration -->
     <!-- <div class="absolute inset-0 bg-clean-white opacity-50"></div> -->
 
-    <div class="relative z-10 ">
-      <div class="space-y-6 w-full flex flex-col items-end">
+    <div class="container ]  relative z-10 ">
+      <div class="space-y-6 h-full w-full flex flex-col justify-center items-end min-h-[100vh] py-4">
         <!-- Stat Bar 1 - 90% (Wider) -->
-        <div class="w-[90%] px-4 md:px-12 py-5 bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-100">
+        <div class="w-[90%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
           <div class="flex flex-col md:flex-row items-center gap-6">
             <h2 class="text-h2 text-midnight-blue">90%</h2>
             <p class="text-midnight-blue text-lg leading-relaxed">
@@ -17,7 +17,7 @@
         </div>
 
         <!-- Stat Bar 2 - 72% -->
-        <div class="w-[70%] px-4 md:px-12 py-5 bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-100">
+        <div class="w-[70%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
           <div class="flex flex-col md:flex-row items-center gap-6">
             <h2 class="text-h2 text-midnight-blue">72%</h2>
             <p class="text-midnight-blue text-lg leading-relaxed">
@@ -28,7 +28,7 @@
         </div>
 
         <!-- Stat Bar 3 - 08% -->
-        <div class="w-[80%] px-4 md:px-12 py-5 bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-100">
+        <div class="w-[80%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
           <div class="flex flex-col md:flex-row items-center gap-6">
             <h2 class="text-h2 text-midnight-blue">08%</h2>
             <p class="text-midnight-blue text-lg leading-relaxed">
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-  </section>
+  <!-- </section> -->
 </template>
 
 <script setup>

@@ -38,11 +38,19 @@
               v-for="link in navigationLinks"
               :key="link.href"
               :href="link.href"
-              class="flex justify-start items-center  text-lg md:text-2xl leading-relaxed gap-3  text-midnight-blue hover:text-opacity-80 transition-colors group"
+              class="nav-link group inline-flex items-center gap-3 text-lg md:text-2xl leading-relaxed text-midnight-blue hover:text-lemon active:text-midnight-blue transition-colors duration-300 ease-in-out font-bold underline"
             >
-              <!-- Triangle Icon -->
-              <img src="/common/bulletright.svg" alt="link icons" class="w-6 h-6" />
-              <!-- Underlined Text -->
+              <!-- Icon container: bulletright default, downarrow on hover/active, smooth crossfade -->
+              <span class="relative flex-shrink-0 w-6 h-6 flex items-center justify-center text-inherit">
+                <span class="absolute inset-0 flex items-center justify-center nav-icon-default transition-opacity duration-300 ease-in-out" aria-hidden="true">
+                  <svg width="27" height="36" viewBox="0 0 27 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-5">
+                    <path d="M24 16.7L1.5 32.7V2.69995L24 16.7Z" stroke="currentColor" stroke-width="3"/>
+                  </svg>
+                </span>
+                <span class="absolute inset-0 flex items-center justify-center nav-icon-hover opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out" aria-hidden="true">
+                  <img src="/common/yellowupperarrow.svg" alt="" class="w-5 h-5 rotate-180" aria-hidden="true" />
+                </span>
+              </span>
               <span class="underline">{{ link.text }}</span>
             </a>
           </nav>
@@ -79,3 +87,16 @@ const handleButtonClick = () => {
   }
 }
 </script>
+
+<style scoped>
+.nav-link:hover .nav-icon-default,
+.nav-link:active .nav-icon-default {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-link:hover .nav-icon-hover,
+.nav-link:active .nav-icon-hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+</style>

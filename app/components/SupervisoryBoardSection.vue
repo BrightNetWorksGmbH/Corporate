@@ -4,11 +4,11 @@
       <!-- Title -->
       <h2 class="text-3xl max-md:font-bold md:text-h2 text-midnight-blue mb-12 text-center lg:text-left">
         Sichtbare Selbstfindung. Unabhängige Kontrolle.
-        <span class="text-lemon">Unser Aufsichtsrat.</span>
+        <span class="text-[lemon]">Unser Aufsichtsrat.</span>
       </h2>
 
       <!-- Dashed Border Box -->
-      <div class="border-2 border-dashed border-midnight-blue rounded-2xl p-8 mb-12">
+      <div class="border-2 border-dashed border-midnight-blue rounded-[40px] p-8 mb-12">
         <!-- Light Gray Box with Supervisory Board Members -->
         <div class="bg-gray-200 rounded-[50px] p-8 mb-4">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

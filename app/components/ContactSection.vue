@@ -4,7 +4,7 @@
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat " :style="{
       backgroundImage: `url('/common/euflagg.png')`
     }"></div>
-    <div class="absolute inset-0 bg-midnight-blue opacity-30"></div>
+    <!-- <div class="absolute inset-0 bg-midnight-blue opacity-30"></div> -->
 
     <!-- Content -->
     <div
@@ -21,15 +21,15 @@
       <form @submit.prevent="handleSubmit" class=" space-y-16 w-full lg:w-[60%]">
         <!-- Name Input -->
         <input v-model="formData.name" type="text" placeholder="Ihr Name" required
-          class="text-center w-full p-5 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all" />
+          class="text-center w-full p-7 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all" />
 
         <!-- Email Input -->
         <input v-model="formData.email" type="email" placeholder="Ihre Mailadresse" required
-          class="text-center w-full p-6 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all" />
+          class="text-center w-full p-7 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all" />
 
         <!-- Message Textarea -->
         <textarea v-model="formData.message" placeholder="How can we help you?" rows="4" required
-          class="w-full p-6 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all resize-none"></textarea>
+          class="w-full p-7 bg-clean-white text-midnight-blue placeholder-midnight-blue text-2xl  focus:outline-none focus:ring-2 focus:ring-lemon transition-all resize-none"></textarea>
 
         <!-- Submit Button -->
         <div class="flex justify-center">

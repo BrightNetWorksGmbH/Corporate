@@ -1,21 +1,21 @@
 <template>
   <!-- Mission Section: White Background with Left Image and Right Content -->
-  <div class="bg-clean-white rounded-t-2xl px-4 md:py-16 md:pr-16 md:pl-0 relative">
+  <div class="bg-clean-white rounded-t-2xl px-4 md:py-16 md:pr-16 md:pl-0 relative 2xl:max-h-[70vh]">
     <div class="container mx-auto">
       <div class="relative" :class="props.containerHeightClass">
         <!-- Left: Image with Triangle Overlay (overlapping from above) -->
-        <div class="absolute left-0 top-0 max-w-[80vw] hidden md:block w-full md:w-[80%] mr-10">
+        <div class="absolute left-0 top-0 max-w-[80vw] hidden md:block w-full md:w-[80%] mr-10 ">
           <!-- Statue Image (extends into first section) -->
           <div class="relative -mt-32 lg:-mt-44 w-full">
             <img :src="props.statueImage" alt="Greek statue" class="w-full object-cover relative z-10" />
             <!-- Large Triangle Overlay -->
-            <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none w-full">
+            <!-- <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none w-full">
               <svg class="w-[100%] h-[95%]" viewBox="-13 -2 126 125" preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 3 L110 117 L-10 117 Z" fill="none" stroke="#00002f" stroke-width="3"
                   stroke-miterlimit="10" />
               </svg>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -42,7 +42,7 @@ const props = withDefaults(defineProps<{
   statueImage?: string
   containerHeightClass?: string
 }>(), {
-  statueImage: '/common/socratus.png',
+  statueImage: '/common/wisdom.png',
   containerHeightClass: 'min-h-[90vh]'
 })
 

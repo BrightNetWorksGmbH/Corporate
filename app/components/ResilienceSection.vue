@@ -1,9 +1,9 @@
 <template>
     <section class="bg-clean-white relative -m-2 rounded-b-2xl">
         <!-- Top Section: Background Image with Text -->
-        <div class="relative bg-cover  bg-no-repeat py-32 px-4 md:h-[110vh]  rounded-b-2xl overflow-hidden" :style="{
+        <div class="relative bg-cover  bg-no-repeat bg-[right_20%] py-32 px-4 md:h-[115vh]  rounded-b-2xl overflow-hidden" :style="{
             backgroundImage: `url('/ocean8.png')`,
-            backgroundPosition: 'right center'
+            // backgroundPosition: 'right center'
         }">
             <!-- Dark Overlay for better text readability -->
             <div class="absolute inset-0 bg-midnight-blue bg-opacity-30"></div>

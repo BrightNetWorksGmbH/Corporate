@@ -97,14 +97,14 @@
                 <!-- Bottom: Three Data Type Sections -->
                 <div class=" relative  border-gray-400 mt-5 ">
                     <!-- SVG Connecting Lines -->
-                    <div class="hidden lg:flex justify-between max-w-2xl w-full h-1 mx-auto relative h-30 pl-10 ">
+                    <div class="hidden lg:flex justify-between max-w-[650px] w-full h-1 mx-auto relative h-30 pl-10 ">
                         <div class="flex-1 border-l-2 border-t-2 border-black h-10"></div>
                         <div class="flex-1 border-l-2 border-t-2  border-black h-10"></div>
                         <div class="absolute -top-[40px] right-0 border-r-2  h-[60px] border-black w-1"></div>
                     </div>
 
                     <!-- Data Type Sections -->
-                    <div class="flex justify-around items-start gap-4 mt-12 max-w-4xl mx-auto ">
+                    <div class="flex justify-around items-start gap-4 mt-12 max-w-4xl mx-auto pl-10">
                         <div v-for="(dataType, index) in dataTypes" :key="index"
                             class="flex-1 text-center max-w-[300px]">
                             <!-- Icon -->
@@ -176,13 +176,7 @@
 
                     <div class="flex flex-col md:flex-row  justify-start items-center space-x-8">
                         <!-- Understand More Link -->
-                        <a href="#"
-                            class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group">
-                            <!-- Downward Triangle Icon -->
-                            <img src="/common/downarrow.svg" alt="link icons" class="w-6 h-6" />
-                            <!-- Underlined Text -->
-                            <span class="underline font-bold">Understand more</span>
-                        </a>
+                        <UnderstandMoreLink />
 
                         <!-- Button -->
                         <div class="pt-4">
@@ -263,7 +257,7 @@ const departmentHeads = [
         subtitle: 'SALES & MARKETING'
     },
     {
-        name: 'Business Lodges',
+        name: '',
         imageSrc: '/team/stephan.png',
         domain: 'BUSINESS LODGES',
         subtitle: 'OPERATIONAL UNITS'

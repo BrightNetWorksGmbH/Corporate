@@ -4,14 +4,14 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[95vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
+        <section class="relative z-10 h-[90vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
             backgroundImage: `url('/alliancelanding.png')`
         }">
             <!-- White Overlay -->
             <!-- <div class="absolute inset-0 bg-clean-white bg-opacity-20 z-0"></div> -->
 
             <!-- Content -->
-            <div class="relative z-10 lg:pl-16 p-3 w-full pt-20 h-full ">
+            <div class="container relative z-10  py-3 w-full pt-20 h-full ">
                 <div class="h-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center ">
                     <!-- Left Section: Title -->
                     <div class="space-y-6 lg:col-span-2">
@@ -44,7 +44,7 @@
         <main class="relative z-10">
             <div class="container mx-auto px-2 pt-24 pb-60 leading-relaxed">
                 <h2 class="text-3xl max-md:font-bold md:text-h1 ">
-                    <span class="text-olive-gold">IN DIESEM JAHRTAUSEND IST SICHERHEIT NICHT KÄUFLICH. SIE BEGINNT UND
+                    <span class="text-lemon">IN DIESEM JAHRTAUSEND IST SICHERHEIT NICHT KÄUFLICH. SIE BEGINNT UND
                         ENDET
                         IMMER MIT AUTONOMIE.</span>
                 </h2>

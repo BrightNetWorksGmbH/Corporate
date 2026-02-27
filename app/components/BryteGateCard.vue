@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-midnight-blue rounded-[40px] px-16 py-4 shadow-lg max-w-xl flex flex-col items-center justify-center">
+  <div class="bg-midnight-blue rounded-[30px] px-16 py-8 shadow-lg   flex flex-col items-center justify-center">
     <!-- Title with Icon -->
     <div class="flex items-center gap-2 mb-3">
-      <h3 class="text-clean-white text-xl font-bold">BRYTEGATE</h3>
+      <!-- <h3 class="text-clean-white text-xl font-bold">BRYTEGATE</h3> -->
+       <img src="/common/whitebrytelogo.svg" alt="brytegate" class=" " />
     </div>
 
     <!-- Fingerprint Icon -->
@@ -13,9 +14,9 @@
     </div>
 
     <!-- Token Input and Submit Button -->
-    <div class="flex items-center mb-3  transition-all  rounded-l-2xl  overflow-hidden">
+    <div class="w-full flex items-center mb-3  transition-all  rounded-l-[10px]  overflow-hidden  ">
       <input v-model="token" type="text" placeholder="Type in Token"
-        class="flex-1 py-[8.5px] px-10 h-full w-1/2 bg-black text-clean-white placeholder-clean-white text-xs font-semibold focus:outline-none  border-gray-500 transition-all rounded-l-2xl border" />
+        class="flex-1 py-[8.5px] px-10 h-full w-1/2 bg-black text-clean-white placeholder-clean-white text-[11px] font-semibold focus:outline-none  border-gray-500 transition-all rounded-l-[12px] border" />
       <button @click="handleSubmit" :disabled="!hasText"
         class="px-10 h-full font-bold transition-all whitespace-nowrap w-1/2" :class="buttonClasses">
         SUBMIT
@@ -23,7 +24,7 @@
     </div>
 
     <!-- Status Messages -->
-    <div class="text-clean-white text-xs space-y-1 mb-3">
+    <div class="text-clean-white text-xs space-y-1 mb-3 text-center text-[11px]">
       <p>Connection established.</p>
       <p>No personal Data transferred.</p>
     </div>
