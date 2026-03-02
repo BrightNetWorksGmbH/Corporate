@@ -68,7 +68,7 @@
             </div>
 
             <!-- Mission Section -->
-            <StatueWithTextSection container-height-class="h-[50vh] md:min-h-[90vh]" />
+            <StatueWithTextSection class="h-[50vh] md:min-h-[90vh]" />
             <!-- Team Section -->
             <div class="relative z-20 rounded-b-2xl bg-clean-white overflow-hidden">
                 <TeamSection />
