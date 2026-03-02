@@ -40,7 +40,7 @@
     </div>
 
     <!-- Second Part: White Background with Left Image and Right Content -->
-    <StatueWithTextSection container-height-class="h-[50vh] md:min-h-[90vh]" />
+    <StatueWithTextSection class="h-[50vh] md:min-h-[90vh] " />
 
     <!-- Third Part: Team Section -->
     <TeamSection />
