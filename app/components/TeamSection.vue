@@ -1,11 +1,10 @@
 <template>
   <section class="bg-clean-white py-20 px-4 rounded-b-2xl ">
-    <div class="container mx-auto">
+    <div class="container mx-auto ">
       <!-- Title -->
       <div class="text-start mb-12">
-        <h5 class="text-h5 text-midnight-blue">
-          Wir bauen, was Europa schützt.<br />
-          Ohne Kompromisse.
+        <h5 class="text-h5 text-midnight-blue whitespace-pre-line">
+          {{ $t('team.heading') }}
         </h5>
       </div>
 
@@ -25,38 +24,17 @@
 </template>
 
 <script setup>
-const teamMembers = [
-  {
-    id: 1,
-    name: 'Stephan Tomat',
-    position: 'Vorstandsvorsitzender',
-    imageSrc: '/team/stephan.png' // Placeholder - update with actual image path
-  },
-  {
-    id: 2,
-    name: 'Dirk Markus',
-    position: 'Chief of Staff',
-    imageSrc: '/team/dirk.png' // Placeholder - update with actual image path
-  },
-  {
-    id: 3,
-    name: 'Verena Menzel',
-    position: 'Business Intelligence',
-    imageSrc: '/team/verena.png' // Placeholder - update with actual image path
-  },
-  {
-    id: 4,
-    name: 'Andreas Jacobi',
-    position: 'Finance, CFO',
-    imageSrc: '/team/stephan.png' // Placeholder - update with actual image path
-  },
-  {
-    id: 5,
-    name: 'Christoph Hempel',
-    position: 'Business Integrity',
-    imageSrc: '/team/stephan.png' // Placeholder - update with actual image path
-  }
-]
+import { computed } from 'vue'
+
+const { t } = useI18n()
+
+const teamMembers = computed(() => [
+  { id: 1, name: 'Stephan Tomat', position: t('team.positions.vorstand'), imageSrc: '/team/stephan.png' },
+  { id: 2, name: 'Dirk Markus', position: t('team.positions.chiefOfStaff'), imageSrc: '/team/dirk.png' },
+  { id: 3, name: 'Verena Menzel', position: t('team.positions.businessIntelligence'), imageSrc: '/team/verena.png' },
+  { id: 4, name: 'Andreas Jacobi', position: t('team.positions.financeCfo'), imageSrc: '/team/stephan.png' },
+  { id: 5, name: 'Christoph Hempel', position: t('team.positions.businessIntegrity'), imageSrc: '/team/stephan.png' },
+])
 
 const handleMemberClick = (member) => {
   console.log(`Request data for: ${member.name} - ${member.position}`)

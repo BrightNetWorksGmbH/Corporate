@@ -17,11 +17,11 @@
                     <div class="space-y-6 lg:col-span-2">
                         <h1
                             class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
-                            <span class="text-lemon">A NEW ERA<br />
-                                OF</span><span class="text-midnight-blue"> DATA</span><br />
-                            <span class="text-midnight-blue">SCIENCE</span><br />
-                            <span class="text-lemon">AWAITS.</span><br />
-                            <span class="text-lemon">DONT BE LATE.</span>
+                            <span class="text-lemon">{{ $t('aufgabe.hero.line1') }}<br />
+                                {{ $t('aufgabe.hero.line2') }}</span><span class="text-midnight-blue"> {{ $t('aufgabe.hero.line3') }}</span><br />
+                            <span class="text-midnight-blue">{{ $t('aufgabe.hero.line4') }}</span><br />
+                            <span class="text-lemon">{{ $t('aufgabe.hero.line5') }}</span><br />
+                            <span class="text-lemon">{{ $t('aufgabe.hero.line6') }}</span>
                         </h1>
                     </div>
 
@@ -45,8 +45,8 @@
         <main class="relative z-10">
             <div class="container mx-auto px-2 py-16 leading-relaxed">
                 <h2 class="text-2xl md:text-h1 ">
-                    <span class="text-clean-white">THE MOST DANGEROUS MISTAKE </span>
-                    <span class="text-lemon">TO BE MADE IS, TO ASSUME THAT UNEQUAL DATA NEEDS EQUAL PROTECTION.</span>
+                    <span class="text-clean-white">{{ $t('aufgabe.mistakeHeadlineWhite') }}</span>
+                    <span class="text-lemon">{{ $t('aufgabe.mistakeHeadlineLemon') }}</span>
                 </h2>
             </div>
             <!-- Data Equality Section -->
@@ -57,11 +57,10 @@
             <ResilienceSection />
 
             <div class="container mx-auto py-16 p-2 leading-relaxed">
-                <h2 class="text-4xl max-md:font-bold md:text-h1 leading-relaxed">
-                    <span class="text-lemon">WENN VERANTWORTUNG FEHLT, MUSS </span>
-                    <span class="text-clean-white">EINER</span> <span class="text-lemon">SIE ÜBERNEHMEN.
-                        <br>DIES TUE ICH.<br>
-                        MIT MEINEM TEAM.</span>
+                <h2 class="text-4xl max-md:font-bold md:text-h1 leading-relaxed whitespace-pre-line">
+                    <span class="text-lemon">{{ $t('aufgabe.responsibilityLemon') }}</span>
+                    <span class="text-clean-white">{{ $t('aufgabe.responsibilityWhite') }}</span>
+                    <span class="text-lemon"> {{ $t('aufgabe.responsibilityLemon2') }}</span>
                 </h2>
             </div>
             <OrganizationOverview />
@@ -69,9 +68,7 @@
                 class="container w-full mx-auto bg-contain bg-right  bg-no-repeat relative leading-relaxed flex justify-between items-start overflow-hidden">
                 <div class="w-full z-10 lg:w-[45%] h-full py-10 p-10 relative">
                     <h3 class="text-4xl lg:text-h2  leading-loose tracking-wider ">
-                        <span class="text-lemon lg:text-[90px] font-[900]">EUROPEANS
-                            MAY NOT CREATE VALUES, DEPENDING ON OTHERS TO BE SAFE.</span>
-
+                        <span class="text-lemon lg:text-[90px] font-[900]">{{ $t('aufgabe.europeansHeadline') }}</span>
                     </h3>
                 </div>
                 <div class="hidden lg:block lg:w-[62%] -mt-[15%] absolute right-0 top-0">

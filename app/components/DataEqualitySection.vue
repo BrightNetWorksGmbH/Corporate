@@ -5,17 +5,14 @@
                 <!-- Left Section -->
                 <div class="">
                     <!-- Title with Mixed Colors -->
-                    <h2 class="text-[60px] font-bold leading-relaxed mb-10">
-                        <span class="text-midnight-blue">There's a simple Truth, that need's to be told:</span><br />
-                        <span class="text-lemon">Not all Data <br> is Equal.</span>
+                    <h2 class="text-[60px] font-bold leading-relaxed mb-10 whitespace-pre-line">
+                        <span class="text-midnight-blue">{{ $t('dataEquality.title1') }}</span><br />
+                        <span class="text-lemon">{{ $t('dataEquality.title2') }}</span>
                     </h2>
 
                     <!-- Paragraph -->
                     <p class=" text-midnight-blue copytext-paragraph mb-16">
-                        In moral systems, equality is an ideal we rightly strive for.
-                        In the realm of data, however, equality becomes a dangerous simplification.
-                        Data is inherently unequal: some is ballast, while certain subsets can mean healing, power or
-                        even <strong>weapons</strong>.
+                        {{ $t('dataEquality.paragraph') }}
                     </p>
 
                     <div class="flex flex-col md:flex-row items-center md:gap-12 mt-10">
@@ -24,7 +21,7 @@
 
                         <!-- Button -->
                         <div class="pt-2 w-full md:w-auto">
-                            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+                            <AppButton :text="$t('about.cta')" @click="handleButtonClick" />
                         </div>
                     </div>
                 </div>

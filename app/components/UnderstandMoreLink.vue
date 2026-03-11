@@ -23,7 +23,7 @@
         <img src="/common/yellowupperarrow.svg" alt="" class="w-5 h-5 rotate-180" aria-hidden="true" />
       </span>
     </span>
-    <span class="underline"><slot>Understand more</slot></span>
+    <span class="underline">{{ $t('common.understandMore') }}</span>
   </a>
 </template>
 

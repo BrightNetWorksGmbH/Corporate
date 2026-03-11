@@ -1,7 +1,7 @@
 <template>
   <section class="relative z-20 ">
     <!-- First Part: Dark Blue Background with Centered Content -->
-    <div class="bg-midnight-blue py-20 px-4 mb-5 relative lg:min-h-[90vh] 2xl:min-h-[70vh]">
+    <div class="bg-midnight-blue py-20 px-4 mb-5 relative lg:min-h-[90vh] 2xl:min-h-[70vh] flex justify-center items-center">
       <!-- Inverted Triangle Icon at Top -->
       <!-- <div class="flex justify-center mb-8">
         <svg
@@ -20,13 +20,12 @@
       </div> -->
 
       <!-- Centered Text Content -->
-      <div class="container mx-auto text-center pt-10 relative ">
+      <div class="container mx-auto text-center  relative ">
         <!-- White Border Inverted Triangle SVG -->
         <div class="flex flex-col items-center">
           <img src="/white-icons/frontofsculpture.svg" alt="white arrow icon" class="w-32 h-32 mb-3 rotate-180" />
-          <h4 class="text-h5 text-clean-white  leading-[50px] tracking-wide ">
-            Wir schaffen Resilienz. <br>Autonome Daten für eine autonome Ökonomie –<br />
-            entwickelt mit Integrität, Ethik und Exzellenz.
+          <h4 class="text-h5 text-clean-white leading-[50px] tracking-wide whitespace-pre-line">
+            {{ $t('mission.headline') }}
           </h4>
         </div>
 
@@ -40,7 +39,7 @@
     </div>
 
     <!-- Second Part: White Background with Left Image and Right Content -->
-    <StatueWithTextSection class="h-[50vh] md:min-h-[90vh] " />
+    <StatueWithTextSection  />
 
     <!-- Third Part: Team Section -->
     <TeamSection />
