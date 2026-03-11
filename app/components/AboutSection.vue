@@ -12,21 +12,18 @@
           </div>
 
           <!-- Main Heading -->
-          <h2 class="text-h3 text-midnight-blue text-left">
-            Wir sind da, weil sonst<br />
-            noch keiner da ist.
+          <h2 class="text-h3 text-midnight-blue text-left whitespace-pre-line">
+            {{ $t('about.heading') }}
           </h2>
 
           <!-- Sub-text -->
           <p class="copytext text-midnight-blue max-w-xl">
-            Europas Wirtschaft steht an einem Wendepunkt.
-            Wer jetzt keine Datenhoheit schafft,
-            verliert Handlungshoheit.
+            {{ $t('about.subtext') }}
           </p>
 
           <!-- Call to Action Button -->
           <AppButton
-            text="Termin vereinbaren"
+            :text="$t('about.cta')"
             @click="handleButtonClick"
           />
         </div>
@@ -61,24 +58,16 @@
 </template>
 
 <script setup>
-const navigationLinks = [
-  {
-    text: 'Unsere Aufgabe',
-    href: '#unsere-aufgabe'
-  },
-  {
-    text: 'Verantwortung & Governance',
-    href: '#verantwortung-governance'
-  },
-  {
-    text: 'Themen- und Produkteinblick',
-    href: '#themen-produkteinblick'
-  },
-  {
-    text: 'Digitale Sicherheit in Europa',
-    href: '#digitale-sicherheit'
-  }
-]
+import { computed } from 'vue'
+
+const { t } = useI18n()
+
+const navigationLinks = computed(() => [
+  { text: t('about.link1'), href: '#unsere-aufgabe' },
+  { text: t('about.link2'), href: '#verantwortung-governance' },
+  { text: t('about.link3'), href: '#themen-produkteinblick' },
+  { text: t('about.link4'), href: '#digitale-sicherheit' },
+])
 
 const handleButtonClick = () => {
   const contactSection = document.getElementById('contact-section')

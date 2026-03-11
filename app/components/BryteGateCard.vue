@@ -15,18 +15,18 @@
 
     <!-- Token Input and Submit Button -->
     <div class="w-full flex items-center mb-3  transition-all  rounded-l-[10px]  overflow-hidden  ">
-      <input v-model="token" type="text" placeholder="Type in Token"
+      <input v-model="token" type="text" :placeholder="$t('brytegate.tokenPlaceholder')"
         class="flex-1 py-[9px] px-7 h-full w-[55%] bg-black text-clean-white placeholder-clean-white text-[11px] font-semibold focus:outline-none  border-gray-500 transition-all rounded-l-[12px] border" />
       <button @click="handleSubmit" :disabled="!hasText"
         class="px-5 h-full font-semibold transition-all whitespace-nowrap w-[45%] text-xs py-1" :class="buttonClasses">
-        SUBMIT
+        {{ $t('brytegate.submit') }}
       </button>
     </div>
 
     <!-- Status Messages -->
     <div class="text-clean-white text-xs space-y-1 mb-3 text-center text-[11px]">
-      <p>Connection established.</p>
-      <p>No personal Data transferred.</p>
+      <p>{{ $t('brytegate.statusLine1') }}</p>
+      <p>{{ $t('brytegate.statusLine2') }}</p>
     </div>
   </div>
 </template>

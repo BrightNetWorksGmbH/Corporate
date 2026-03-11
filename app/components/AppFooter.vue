@@ -1,30 +1,30 @@
 <template>
-  <footer class="bg-clean-white py-10 px-4 rounded-2xl border-t border-gray-200 relative z-10">
+  <footer class="bg-clean-white py-5 lg:py-10 px-4 rounded-2xl border-t border-gray-200 relative z-10 mx-2">
     <div class="container mx-auto">
-      <div class="flex items-center justify-between">
+      <div class="relative flex items-center justify-between lg:py-10">
         <!-- Left: EU Logo with texts -->
-        <div class="hidden md:flex items-center justify-center gap-3">
+        <div class="hidden md:flex items-center justify-center gap-3 ">
           <img src="/common/euflag.svg" alt="EU Flag" class="w-12 h-12" />
           <p class="text-[10px] font-semibold text-blueish-gray">
-            Connection established via BryteGate.
-            <br> Welcome to the Future of Resilient European Data.
-            <br>No Personal Data Was Transferred or Saved Yet.
+            {{ $t('footer.euBannerLine1') }}
+            <br>{{ $t('footer.euBannerLine2') }}
+            <br>{{ $t('footer.euBannerLine3') }}
           </p>
         </div>
 
         <!-- Center: BryteArk Logo -->
-        <div class="flex flex-col items-center">
+        <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 flex flex-col items-center mb-8  py-10">
           <img src="/common/mainLogo.svg" alt="BryteArk Logo" class="h-16 md:h-28" />
         </div>
 
         <!-- Right: Fingerprint and Menu -->
-        <div class="relative flex flex-row items-center gap-4">
+        <div class="relative flex flex-row items-center gap-4 ">
           <img src="/common/finterprintmark.svg" alt="Menu" class="w-12 h-12" />
           <div class="flex flex-row items-center gap-1 cursor-pointer" @click.stop="toggleMenu">
             <img src="/common/menuDark.svg" alt="Menu" class="w-12 h-12" />
             <p
               class="text-midnight right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
-              MENU
+              {{ $t('footer.menu') }}
             </p>
           </div>
 
@@ -55,17 +55,20 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 const isMenuOpen = ref(false)
 
-const pages = [
-  { name: 'Home', path: '/' },
-  { name: 'Alliance', path: '/alliance' },
-  { name: 'Aufgabe', path: '/aufgabe' },
-  { name: 'Digital Autonomy', path: '/digital-autonomy' },
-  { name: 'Governance', path: '/governance' },
-]
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+const pages = computed(() => [
+  { name: t('nav.home'), path: localePath('/') },
+  { name: t('nav.alliance'), path: localePath('/alliance') },
+  { name: t('nav.aufgabe'), path: localePath('/aufgabe') },
+  { name: t('nav.digitalAutonomy'), path: localePath('/digital-autonomy') },
+  { name: t('nav.governance'), path: localePath('/governance') },
+])
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value

@@ -1,0 +1,178 @@
+{
+  "home": {
+    "hero": {
+      "titleLine1": "We are:",
+      "titleLine2": "Europe's Powerhouse for Data Resilience",
+      "description": "In a world where data has become a weapon, currency, and tool of power, European companies need more than protection: they need resilience. BryteArk AG is the answer – the powerhouse for data resilience, built on responsibility, structure, and technological expertise."
+    }
+  },
+  "header": {
+    "euBannerLine1": "Connection established via BryteGate.",
+    "euBannerLine2": "Welcome to the Future of Resilient European Data.",
+    "euBannerLine3": "No Personal Data Was Transferred or Saved Yet.",
+    "menu": "MENU"
+  },
+  "nav": {
+    "home": "Home",
+    "alliance": "Alliance",
+    "aufgabe": "Mission",
+    "digitalAutonomy": "Digital Autonomy",
+    "governance": "Governance"
+  },
+  "statistics": {
+    "bar1": "of the digital tools that European companies use daily are not subject to European law – they are operated in the USA or China.",
+    "bar2": "of European companies state that they do not possess true data sovereignty – their core processes depend on non-European cloud or AI providers.",
+    "bar3": "of world GDP – the global damages from cybercrime reported annually, trend rising. This corresponds to approximately 8 trillion US dollars."
+  },
+  "brytegate": {
+    "tokenPlaceholder": "Type in Token",
+    "submit": "SUBMIT",
+    "statusLine1": "Connection established.",
+    "statusLine2": "No personal Data transferred."
+  },
+  "about": {
+    "heading": "We are here because\nno one else is yet.",
+    "subtext": "Europe's economy is at a turning point. Those who do not establish data sovereignty now will lose the ability to act.",
+    "cta": "Schedule appointment",
+    "link1": "Our Mission",
+    "link2": "Responsibility & Governance",
+    "link3": "Topics and product insight",
+    "link4": "Digital security in Europe"
+  },
+  "mission": {
+    "headline": "We build resilience.\nAutonomous data for an autonomous economy –\ndeveloped with integrity, ethics, and excellence.",
+    "statueHeading": "We are Europe's\nPowerhouse for\na secure\ndigital future.",
+    "cta": "Schedule appointment"
+  },
+  "team": {
+    "heading": "We build what protects Europe.\nWithout compromise.",
+    "positions": {
+      "vorstand": "CEO",
+      "chiefOfStaff": "Chief of Staff",
+      "businessIntelligence": "Business Intelligence",
+      "financeCfo": "Finance, CFO",
+      "businessIntegrity": "Business Integrity"
+    }
+  },
+  "contact": {
+    "titleLine1": "Decide today.",
+    "titleLine2": "For uncompromising security.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email address",
+    "messagePlaceholder": "How can we help you?",
+    "submit": "ENQUIRE SAFETY",
+    "successMessage": "Thank you. We received your message and will contact you soon.",
+    "errorMessage": "Could not send your message. Please try again."
+  },
+  "footer": {
+    "euBannerLine1": "Connection established via BryteGate.",
+    "euBannerLine2": "Welcome to the Future of Resilient European Data.",
+    "euBannerLine3": "No Personal Data Was Transferred or Saved Yet.",
+    "menu": "MENU"
+  },
+  "language": {
+    "label": "Language",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "common": {
+    "understandMore": "Understand more"
+  },
+  "aufgabe": {
+    "hero": {
+      "line1": "A NEW ERA",
+      "line2": "OF",
+      "line3": "DATA",
+      "line4": "SCIENCE",
+      "line5": "AWAITS.",
+      "line6": "DONT BE LATE."
+    },
+    "mistakeHeadlineWhite": "THE MOST DANGEROUS MISTAKE ",
+    "mistakeHeadlineLemon": "TO BE MADE IS, TO ASSUME THAT UNEQUAL DATA NEEDS EQUAL PROTECTION.",
+    "responsibilityLemon": "WHEN RESPONSIBILITY IS LACKING, ",
+    "responsibilityWhite": "SOMEONE",
+    "responsibilityLemon2": "MUST TAKE IT.\nI DO.\nWITH MY TEAM.",
+    "europeansHeadline": "EUROPEANS MAY NOT CREATE VALUES, DEPENDING ON OTHERS TO BE SAFE."
+  },
+  "aufgabeContent": {
+    "paragraph1": "Europe is at a turning point. Data is no longer a purely technical resource. It is the foundation of economic agency, political sovereignty, and social stability. Those who control data make decisions. Those who control its structures shape the future. At the same time, much of the digital infrastructure used daily by European companies and institutions relies on systems operated outside European legal, value, and accountability frameworks. This dependency is not abstract. It is structural. And it cannot be resolved by individual products or one-off measures.",
+    "title1": "We do not believe in\na world without risk.",
+    "paragraph2": "For us, resilience does not mean isolation but durability. Not speed, but structure. Not promises, but responsibility. Security is not created where everything is calm, but where structures remain viable under pressure.",
+    "title2": "We build systems that stand firm.",
+    "paragraph3": "That is why we work not on isolated solutions but on architectures. On data spaces that enable autonomy. On systems that are transparent, verifiable, and viable in the long term. And on decision logic that links technological capability with ethical commitment. A central error of the digital present is to treat all data as equal. Yet not all data is equal – and it does not all need the same protection. Some data is interchangeable. Other data is critical. Still other data can, if mishandled, cause serious harm. Our task is to take these differences seriously and derive structures from them that are differentiated, responsible, and effective."
+  },
+  "dataEquality": {
+    "title1": "There's a simple Truth, that need's to be told:",
+    "title2": "Not all Data\nis Equal.",
+    "paragraph": "In moral systems, equality is an ideal we rightly strive for. In the realm of data, however, equality becomes a dangerous simplification. Data is inherently unequal: some is ballast, while certain subsets can mean healing, power or even weapons."
+  },
+  "resilience": {
+    "headline1": "RESILIENCE",
+    "headline2": "MEANS:",
+    "headline3": "HOLDING FAST.",
+    "profileParagraph": "Born on Germany's North Sea coast, Stephan Tomat knows what it means to hold fast. To the tides. To the north wind. To the rain. Not as an exception, but as the norm. From that experience he set out to turn clear visions into viable business structures – structures designed not for short-term effect but for endurance under pressure. Building on the existing BrightNetWorks network, BRYTEARK AG was established under his responsibility as an independent platform for European data resilience, founded on the conviction that digital security only arises",
+    "contactLink": "Contact details",
+    "name": "Stephan Tomat.",
+    "subtitle": "Here to take responsibility.",
+    "paragraph1": "where responsibility, structure, and technological excellence are considered together. As CEO, Stephan Tomat is responsible for the strategic leadership of BRYTEARK. His task is not to generate growth at any cost, but to safeguard integrity, establish stability, and enable sustainable value creation – even when the wind shifts.",
+    "paragraph2": "Resilience is not shown in calm times. But in standing firm when others step aside.",
+    "cta": "Schedule a conversation"
+  },
+  "organizationOverview": {
+    "chartTitle": "THE BACKUP BEHIND\nTHE MAKER.",
+    "supervisoryBoard": "Supervisory Board",
+    "headOfArc": "Head of Arc",
+    "arks": "ARKS",
+    "financeAdmin": "FINANCE & ADMIN",
+    "financeSubtitle": "FINANCE, CONTROLLING, ADMIN",
+    "strategyScience": "STRATEGY & SCIENCE",
+    "strategySubtitle": "SCIENCE, INNOVATION, TECHNOLOGY",
+    "marketingSales": "MARKETING & SALES",
+    "marketingSubtitle": "SALES & MARKETING",
+    "businessLodges": "BUSINESS LODGES",
+    "businessLodgesSubtitle": "OPERATIONAL UNITS",
+    "legalEducation": "LEGAL & EDUCATION",
+    "legalSubtitle": "LEGAL, CONSULTING, EDUCATION",
+    "paragraph1": "With the help of Dr. Ludwig Weber, a recognised expert in corporate law and affectionately known as \"the structurer of the Federal Republic\", CEO Stephan Tomat and selected members of the supervisory board have created a unique corporate structure.",
+    "title1": "The Business Lodges are centrally\nresponsible for all specialist topics.",
+    "paragraph2": "BRYTEARK AG is not a paper tiger but a manifesto of economic efficiency and quality philosophy. All services work within their respective domains towards the Business Lodges, which can focus fully on their topics through this division of tasks.",
+    "paragraph3": "Initially led on an interim basis by CEO Stephan Tomat himself, the Business Lodges are now substantively led by strong team leaders who have already proven themselves in their respective fields over the past decades.",
+    "paragraph4": "Stephan Tomat appointed his chosen team of top-tier experts to the overarching Arks – and thus to the board.",
+    "greenDataTitle": "GREEN DATA",
+    "greenDataDesc": "Systems that make resource consumption sustainable for companies",
+    "strongDataTitle": "STRONG DATA",
+    "strongDataDesc": "Systems that make data and data flows resilient and secure for companies",
+    "deepDataTitle": "DEEP DATA",
+    "deepDataDesc": "Systems that make automation, AI and robotics safe and controllable for companies"
+  },
+  "alliance": {
+    "hero": {
+      "line1": "ACCESS",
+      "line2": "DOES NOT ARISE",
+      "line3": "THROUGH PURCHASE,",
+      "line4": "BUT THROUGH",
+      "line5": "RESPONSIBILITY."
+    },
+    "headline": "IN THIS MILLENNIUM, SECURITY IS NOT FOR SALE. IT ALWAYS BEGINS AND ENDS WITH AUTONOMY."
+  },
+  "allianceContent": {
+    "title1": "Why no\nservice?",
+    "paragraph1": "Security and classic service models are fundamentally at odds. Service creates hierarchy. It creates dependency. Security is provided for money in return – time-limited, contractually regulated, terminable. But security is not a state that can be switched on or off. What happens when payments stop? What happens when contracts end or providers change? What happens when systems become critical – exactly when stability is most urgently needed? In the reality of IT, this often creates a double dependency:",
+    "bullet1": "The service provider depends on ongoing payment.",
+    "bullet2": "The customer depends on access to the service provider, since switching involves high costs, risks and uncertainties.",
+    "paragraph2": "These dependencies are not only economically problematic. They are structurally risky. Security must not be an external service. It must not be outsourced, switched off or replaced.",
+    "title2": "Autonomy instead of\ndependency",
+    "paragraph3": "Digital resilience can only arise where autonomy and self-determination are possible. Where systems can be understood, controlled and further developed – independent of individual providers or contractual relationships. That is why we strive for our partners – not customers – to achieve:",
+    "bullet3": "full access to source code, architectures and research status",
+    "bullet4": "shared knowledge instead of proprietary isolation",
+    "bullet5": "active participation instead of passive use",
+    "paragraph4": "Not because we are exposing ourselves. But because we do not want to exchange money for security and thereby create new risks.",
+    "title3": "OUR ANSWER IS THE\nBRYTE ALLIANCE.",
+    "paragraph5": "The BRYTEALLIANCE is an alliance of leading actors who consciously empower each other instead of becoming dependent on one another. Together we work to strengthen autonomy, systematically reduce dependencies and anchor digital security as a lasting capability – not as a product. We believe that security does not arise through control from outside, but through competence, transparency and shared responsibility.",
+    "title4": "No licence.\nA European\nalliance for digital\nautonomy.",
+    "paragraph6": "We invite top players who want to share responsibility rather than delegate it – and who want to work with us and our partners on an autonomous security technology centre in Europe.",
+    "title5": "WE ARE PROUD OF\nOUR",
+    "title5Highlight": "ALLIANCE PARTNERS",
+    "title5Suffix": "IN THE BRYTE ALLIANCE"
+  }
+}

@@ -42,7 +42,7 @@
 
         <!-- Main Content -->
         <main class="relative z-10">
-            <div class="container mx-auto px-2 pt-24 pb-60 leading-relaxed">
+            <div class="container mx-auto px-2 py-24 max-2xl:pb-60 leading-relaxed">
                 <h2 class="text-3xl max-md:font-bold md:text-h1 ">
                     <span class="text-lemon">IN DIESEM JAHRTAUSEND IST SICHERHEIT NICHT KÄUFLICH. SIE BEGINNT UND
                         ENDET
@@ -58,7 +58,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div id="contact-section" class="relative z-10 -m-10">
+            <div id="contact-section" class="relative z-10 -mt-10">
                 <ContactSection />
             </div>
         </main>

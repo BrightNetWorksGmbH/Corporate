@@ -1,47 +1,145 @@
 <template>
-  <!-- <section class="container relative py-20  w-full flex justify-end"> -->
-    <!-- Background Image - Stylized head illustration -->
-    <!-- <div class="absolute inset-0 bg-clean-white opacity-50"></div> -->
-
-    <div class="container ]  relative z-10 ">
-      <div class="space-y-6 h-full w-full flex flex-col justify-center items-end min-h-[100vh] py-4">
-        <!-- Stat Bar 1 - 90% (Wider) -->
-        <div class="w-[90%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <h2 class="text-h2 text-midnight-blue">90%</h2>
-            <p class="text-midnight-blue text-lg leading-relaxed">
-              der digitalen Werkzeuge, die europäische Unternehmen täglich nutzen, unterliegen nicht dem europäischen
-              Recht - sie werden in den USA oder China betrieben
-            </p>
-          </div>
+  <div ref="sectionRef" class="container relative z-10 lg:min-h-[100vh] ">
+    <div class="space-y-6 h-full w-full flex flex-col justify-center items-end min-h-[100vh] py-4">
+      <!-- Stat Bar 1 - 90% -->
+      <div class="w-[90%] relative overflow-hidden">
+        <div
+          class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
+          :class="{ 'bar-fill--active': hasAnimated }"
+        />
+        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+          <h2 class="text-h2 text-midnight-blue">{{ displayVal1 }}%</h2>
+          <p class="text-midnight-blue text-lg leading-relaxed">
+            {{ $t('statistics.bar1') }}
+          </p>
         </div>
+      </div>
 
-        <!-- Stat Bar 2 - 72% -->
-        <div class="w-[70%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <h2 class="text-h2 text-midnight-blue">72%</h2>
-            <p class="text-midnight-blue text-lg leading-relaxed">
-              der europäischen Unternehmen geben an, keine echte Datensouveränität zu besitzen - ihre Kernprozesse sind
-              von außereuropäischen Cloud- oder KI-Anbietern abhängig.
-            </p>
-          </div>
+      <!-- Stat Bar 2 - 72% -->
+      <div class="w-[70%] relative overflow-hidden">
+        <div
+          class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
+          :class="{ 'bar-fill--active': hasAnimated }"
+        />
+        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+          <h2 class="text-h2 text-midnight-blue">{{ displayVal2 }}%</h2>
+          <p class="text-midnight-blue text-lg leading-relaxed">
+            {{ $t('statistics.bar2') }}
+          </p>
         </div>
+      </div>
 
-        <!-- Stat Bar 3 - 08% -->
-        <div class="w-[80%] px-4 md:px-12 py-5 bg-gradient-to-r from-[#E29B49] to-[#E2C649]">
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <h2 class="text-h2 text-midnight-blue">08%</h2>
-            <p class="text-midnight-blue text-lg leading-relaxed">
-              des Welt-BIP betragen die globalen Schäden durch Cybercrime jährlich, die gemeldet werden - Tendenz
-              steigend. Das entspricht umgerechnet rund 8 Billionen US
-            </p>
-          </div>
+      <!-- Stat Bar 3 - 08% -->
+      <div class="w-[80%] relative overflow-hidden">
+        <div
+          class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
+          :class="{ 'bar-fill--active': hasAnimated }"
+        />
+        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+          <h2 class="text-h2 text-midnight-blue">{{ displayVal3Formatted }}%</h2>
+          <p class="text-midnight-blue text-lg leading-relaxed">
+            {{ $t('statistics.bar3') }}
+          </p>
         </div>
       </div>
     </div>
-  <!-- </section> -->
+  </div>
 </template>
 
 <script setup>
-// Statistics section component with gradient bars
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+
+const sectionRef = ref(null)
+const hasAnimated = ref(false)
+const contentVisible = ref(false)
+
+const displayVal1 = ref(0)
+const displayVal2 = ref(0)
+const displayVal3 = ref(0)
+
+const TARGETS = [90, 72, 8]
+const BAR_DURATION_MS = 1600
+const COUNT_DURATION_MS = 2200
+
+const displayVal3Formatted = computed(() =>
+  String(displayVal3.value).padStart(2, '0')
+)
+
+let observer = null
+
+function easeOutQuart(t) {
+  return 1 - (1 - t) ** 4
+}
+
+function animateValue(from, to, duration, update) {
+  const start = performance.now()
+  function step(now) {
+    const elapsed = now - start
+    const progress = Math.min(elapsed / duration, 1)
+    const eased = easeOutQuart(progress)
+    const value = Math.round(from + (to - from) * eased)
+    update(value)
+    if (progress < 1) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
+}
+
+function runAnimations() {
+  if (hasAnimated.value) return
+  hasAnimated.value = true
+  contentVisible.value = true
+
+  // Bar grows (1.6s) and text fades in together. After bar finishes, start number count-up.
+  setTimeout(() => {
+    animateValue(0, TARGETS[0], COUNT_DURATION_MS, (v) => { displayVal1.value = v })
+    animateValue(0, TARGETS[1], COUNT_DURATION_MS, (v) => { displayVal2.value = v })
+    animateValue(0, TARGETS[2], COUNT_DURATION_MS, (v) => { displayVal3.value = v })
+  }, BAR_DURATION_MS)
+}
+
+function onIntersect(entries) {
+  const entry = entries[0]
+  if (!entry?.isIntersecting || hasAnimated.value) return
+  runAnimations()
+}
+
+onMounted(() => {
+  if (!sectionRef.value) return
+  observer = new IntersectionObserver(onIntersect, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15,
+  })
+  observer.observe(sectionRef.value)
+})
+
+onBeforeUnmount(() => {
+  if (observer && sectionRef.value) {
+    observer.unobserve(sectionRef.value)
+  }
+})
 </script>
+
+<style scoped>
+.bar-fill {
+  width: 0;
+  transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bar-fill--right {
+  left: auto;
+}
+
+.bar-fill--active {
+  width: 100%;
+}
+
+.bar-content {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.bar-content--visible {
+  opacity: 1;
+}
+</style>

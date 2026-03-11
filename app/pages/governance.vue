@@ -75,7 +75,7 @@
             </div>
 
             <!-- Contact Section -->
-            <div id="contact-section" class="relative z-10 -my-10">
+            <div id="contact-section" class="relative z-10 -mt-10">
                 <ContactSection />
             </div>
         </main>

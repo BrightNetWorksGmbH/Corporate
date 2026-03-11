@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-clean-white relative -m-2 rounded-b-2xl">
+    <section class="bg-clean-white relative -mt-2 rounded-b-2xl">
         <!-- Top Section: Background Image with Text -->
         <div class="relative bg-cover  bg-no-repeat bg-[right_20%] py-32 px-4 md:h-[115vh]  rounded-b-2xl overflow-hidden" :style="{
             backgroundImage: `url('/ocean8.png')`,
@@ -11,9 +11,9 @@
             <!-- Text Content -->
             <div class="relative z-10 container mx-auto">
                 <h2 class="text-2xl md:text-[95px] font-[800] leading-[1.2]">
-                    <span class="text-lemon">RESILIENZ</span><br />
-                    <span class="text-lemon">HEISST:</span><br />
-                    <span class="text-clean-white">STANDHALTEN.</span>
+                    <span class="text-lemon">{{ $t('resilience.headline1') }}</span><br />
+                    <span class="text-lemon">{{ $t('resilience.headline2') }}</span><br />
+                    <span class="text-clean-white">{{ $t('resilience.headline3') }}</span>
                 </h2>
             </div>
         </div>
@@ -31,55 +31,37 @@
 
                     <!-- Paragraph -->
                     <p class="copytext-paragraph text-midnight-blue mb-6 text-left md:pr-14">
-                        An der deutschen Nordseeküste geboren, weiß Stephan Tomat, was Standhalten bedeutet. Den
-                        Gezeiten. Dem Nordwind. Dem Regen. Nicht als Ausnahme, sondern als Normalzustand. Aus dieser
-                        Erfahrung heraus ist er angetreten, klare Visionen in tragfähige unternehmerische Strukturen zu
-                        überführen. Strukturen, die nicht auf kurzfristige Effekte ausgelegt sind, sondern auf
-                        Beständigkeit unter Druck. Auf Basis des bestehenden BrightNetWorks-Netzwerks entstand unter
-                        seiner Verantwortung die BRYTEARK AG als eigenständige Plattform für europäische Datenresilienz
-                        - gegründet aus der Überzeugung, dass digitale Sicherheit nur dort
+                        {{ $t('resilience.profileParagraph') }}
                     </p>
 
                     <!-- Link with Icon -->
                     <a href="#"
                         class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group text-xl">
-                        <!-- Downward Triangle Icon -->
                         <img src="/common/downarrow.svg" alt="arrow down" class="w-6 h-6" />
-                        <!-- Underlined Text -->
-                        <span class="underline">Kontaktdaten</span>
+                        <span class="underline">{{ $t('resilience.contactLink') }}</span>
                     </a>
                 </div>
 
                 <!-- Right Section: Name, Title, and Content -->
                 <div class="space-y-4  h-full">
-                    <!-- Name in Lemon -->
                     <h3 class="text-3xl max-md:font-bold md:text-h3 text-lemon">
-                        Stephan Tomat.
+                        {{ $t('resilience.name') }}
                     </h3>
 
-                    <!-- Subtitle in Midnight Blue -->
                     <h3 class="text-2xl max-md:font-bold md:text-h3 text-midnight-blue leading-relaxed">
-                        Hier um Verantwortung zu tragen.
+                        {{ $t('resilience.subtitle') }}
                     </h3>
 
-                    <!-- First Paragraph -->
                     <p class="copytext-paragraph text-midnight-blue">
-                        entsteht, wo Verantwortung, Struktur und technologische Exzellenz zusammengedacht werden. Als
-                        Vorstandsvorsitzender verantwortet Stephan Tomat die strategische Führung von BRYTEARK. Seine
-                        Aufgabe ist nicht, Wachstum um jeden Preis zu erzeugen, sondern Integrität zu sichern,
-                        Stabilität herzustellen und nachhaltige Wertschöpfung zu ermöglichen - auch dann, wenn der Wind
-                        dreht.
+                        {{ $t('resilience.paragraph1') }}
                     </p>
 
-                    <!-- Second Paragraph -->
                     <p class="copytext text-midnight-blue mb-12">
-                        Resilienz zeigt sich nicht in ruhigen Zeiten.
-                        Sondern darin, stehen zu bleiben, wenn andere ausweichen.
+                        {{ $t('resilience.paragraph2') }}
                     </p>
 
-                    <!-- Button -->
                     <div class="md:pt-16">
-                        <AppButton text="Gespräch vereinbaren" @click="handleButtonClick" />
+                        <AppButton :text="$t('resilience.cta')" @click="handleButtonClick" />
                     </div>
                 </div>
             </div>

@@ -1,92 +1,75 @@
 <template>
+  <!-- Full header: in flow, scrolls away when scrolling down -->
   <header class="container absolute top-0 left-0 right-0 z-50 w-full ">
-    <div class="py-4 ">
-      <div class="flex items-center justify-between">
+    <div class="py-4 relative">
+      <div class="grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center gap-4 ">
         <!-- Left: EU Logo with texts -->
-        <div class="hidden md:flex items-center justify-center gap-3">
+        <div class="hidden md:flex items-center justify-start gap-3">
           <img src="/common/euflag.svg" alt="EU Flag" class="w-12 h-12" />
           <p class="text-[10px] font-semibold text-blueish-gray">
-            Connection established via BryteGate.
-            <br> Welcome to the Future of Resilient European Data.
-            <br>No Personal Data Was Transferred or Saved Yet.
+            {{ $t('header.euBannerLine1') }}
+            <br>{{ $t('header.euBannerLine2') }}
+            <br>{{ $t('header.euBannerLine3') }}
           </p>
         </div>
 
-        <!-- Center: BryteArk Logo -->
-        <div class="flex flex-col items-center">
-          <img src="/common/mainLogo.svg" alt="BryteArk Logo" class="h-16 md:h-24" />
+        <!-- Center: BryteArk Logo - truly centered between left and right -->
+        <div class="flex flex-col items-center justify-center">
+          <img src="/common/mainLogo.svg" alt="BryteArk Logo" class="h-16 md:h-28 mb-8" />
         </div>
 
         <!-- Right: Fingerprint and Menu -->
-        <div class="relative flex flex-row items-center gap-4">
-          <img src="/common/finterprintmark.svg" alt="Menu" class="w-12 h-12" />
-          <div class="flex flex-row items-center gap-1 cursor-pointer" @click.stop="toggleMenu">
-            <img
-              :src="isMenuOpen ? '/common/pressedMenu.svg' : '/common/menuDark.svg'"
-              alt="Menu"
-              class="w-12 h-12 hover:bg-lemon rounded-full"
-            />
-            <p
-              class="right-0 top-1/2 transform rotate-180 text-xs font-semibold writing-vertical-rl text-midnight-blue">
-              MENU
-            </p>
-          </div>
-
-          <!-- Menu Dropdown -->
-          <Transition name="menu-fade">
-            <div v-if="isMenuOpen"
-              class="absolute top-full right-0 mt-2 w-56 bg-midnight-blue rounded-xl shadow-2xl border border-midnight-blue overflow-hidden z-[100]">
-              <!-- Close button: top-right corner -->
-              <button
-                type="button"
-                aria-label="Close menu"
-                class="close-menu-btn group absolute top-2 right-2 z-10 p-1 rounded transition-opacity duration-200 focus:outline-none  focus:ring-offset-midnight-blue"
-                @click.stop="isMenuOpen = false"
-              >
-                <span class="relative block w-6 h-6">
-                  <img src="/common/closewhite.svg" alt="" class="w-6 h-6 close-icon-default transition-opacity duration-200 group-hover:opacity-0" aria-hidden="true" />
-                  <img src="/common/closedyellow.svg" alt="" class="w-6 h-6 close-icon-hover absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" aria-hidden="true" />
-                </span>
-              </button>
-              <nav class="py-2 pt-10">
-                <NuxtLink v-for="page in pages" :key="page.path" :to="page.path"
-                  class="group flex items-center gap-3 px-5 py-3 text-sm font-semibold text-clean-white hover:text-lemon transition-colors duration-300 ease-in-out"
-                  @click="isMenuOpen = false">
-                  <!-- Default: white bullet (right-pointing triangle), fades out on hover -->
-                  <span class="relative flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                    <span class="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out" aria-hidden="true">
-                      <img src="/white-icons/bullet.svg" alt="" class="w-4 h-5" aria-hidden="true" />
-                    </span>
-                    <span class="absolute inset-0 flex items-center justify-center text-lemon opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 ease-in-out" aria-hidden="true">
-                      <img src="/common/yellowupperarrow.svg" alt="" class="w-5 h-5 rotate-180" aria-hidden="true" />
-                    </span>
-                  </span>
-                  {{ page.name }}
-                </NuxtLink>
-              </nav>
-            </div>
-          </Transition>
+        <div class="flex justify-end">
+          <HeaderRightSection
+          :is-menu-open="isMenuOpen"
+          :pages="pages"
+          @toggle-menu="toggleMenu"
+          @close-menu="isMenuOpen = false"
+        />
         </div>
       </div>
     </div>
-
-    <!-- Backdrop to close menu when clicking outside -->
-    <div v-if="isMenuOpen" class="fixed inset-0 z-[99]" @click="isMenuOpen = false"></div>
   </header>
+
+  <!-- Sticky minimal bar: only when scrolling UP, shows only right section -->
+  <Transition name="minimal-bar">
+    <header
+      v-if="showMinimalBar"
+      class="fixed top-0 left-0 right-0 z-[70] w-full  backdrop-blur-sm border-b border-midnight-blue/10 shadow-sm"
+      aria-label="Minimal navigation"
+    >
+      <div class="container py-3 flex items-center justify-end">
+        <HeaderRightSection
+          :is-menu-open="isMenuOpen"
+          :pages="pages"
+          @toggle-menu="toggleMenu"
+          @close-menu="isMenuOpen = false"
+        />
+      </div>
+    </header>
+  </Transition>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 const isMenuOpen = ref(false)
+const showMinimalBar = ref(false)
 
-const pages = [
-  { name: 'Home', path: '/' },
-  { name: 'Alliance', path: '/alliance' },
-  { name: 'Aufgabe', path: '/aufgabe' },
-  { name: 'Digital Autonomy', path: '/digital-autonomy' },
-  { name: 'Governance', path: '/governance' },
-]
+const SCROLL_THRESHOLD = 120
+let lastScrollY = 0
+let ticking = false
+
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+const pages = computed(() => [
+  { name: t('nav.home'), path: localePath('/') },
+  { name: t('nav.alliance'), path: localePath('/alliance') },
+  { name: t('nav.aufgabe'), path: localePath('/aufgabe') },
+  { name: t('nav.digitalAutonomy'), path: localePath('/digital-autonomy') },
+  { name: t('nav.governance'), path: localePath('/governance') },
+])
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -96,28 +79,48 @@ const handleEsc = (e) => {
   if (e.key === 'Escape') isMenuOpen.value = false
 }
 
-onMounted(() => document.addEventListener('keydown', handleEsc))
-onBeforeUnmount(() => document.removeEventListener('keydown', handleEsc))
+function updateMinimalBar() {
+  const scrollY = window.scrollY ?? window.pageYOffset
+  // Show minimal bar only when scrolling UP and past threshold; hide at top or when scrolling down
+  if (scrollY <= SCROLL_THRESHOLD) {
+    showMinimalBar.value = false
+  } else if (scrollY < lastScrollY) {
+    showMinimalBar.value = true
+  } else {
+    showMinimalBar.value = false
+  }
+  lastScrollY = scrollY
+  ticking = false
+}
+
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(updateMinimalBar)
+    ticking = true
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleEsc)
+  lastScrollY = window.scrollY ?? window.pageYOffset
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleEsc)
+  window.removeEventListener('scroll', onScroll)
+})
 </script>
 
 <style scoped>
-.writing-vertical-rl {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+.minimal-bar-enter-active,
+.minimal-bar-leave-active {
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
-.menu-fade-enter-active,
-.menu-fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.menu-fade-enter-from,
-.menu-fade-leave-to {
+.minimal-bar-enter-from,
+.minimal-bar-leave-to {
+  transform: translateY(-100%);
   opacity: 0;
-  transform: translateY(-8px);
-}
-
-.close-icon-hover {
-  pointer-events: none;
 }
 </style>

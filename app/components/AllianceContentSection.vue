@@ -7,88 +7,61 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 copytext-paragraph">
         <!-- Left Section -->
         <div class="space-y-12 md:pr-10">
-          <h4 class="text-left text-h4 text-midnight-blue max-w-6xl leading-relaxed tracking-wide  mb-10 ">
-            Warum keine
-            Dienstleistung?
+          <h4 class="text-left text-h4 text-midnight-blue max-w-6xl leading-relaxed tracking-wide mb-10 whitespace-pre-line">
+            {{ $t('allianceContent.title1') }}
           </h4>
-          <!-- Long Paragraph -->
           <p class="text-midnight-blue ">
-            Sicherheit und klassische Dienstleistungsmodelle stehen in einem grundlegenden Spannungsverhältnis.
-            Dienstleistung erzeugt Hierarchie. Sie schafft Abhängigkeit. Sicherheit wird gegen Geld bereitgestellt -
-            zeitlich begrenzt, vertraglich geregelt, kündbar. Doch Sicherheit ist kein Zustand, den man ein- oder
-            ausschalten kann. Was geschieht, wenn Zahlungen ausbleiben? Was geschieht, wenn Verträge enden oder Anbieter
-            wechseln? Was geschieht, wenn Systeme kritisch werden - genau dann, wenn Stabilität am dringendsten
-            gebraucht wird? <strong class="">In der informatischen Realität entsteht dabei häufig
-              eine doppelte Abhängigkeit:</strong>
+            {{ $t('allianceContent.paragraph1') }}
           </p>
           <div class="flex flex-col gap-4">
             <div class="flex items-start ">
               <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
-              <span class="text-break whitespace-normal">Der Dienstleister ist abhängig von der
-                fortlaufenden Zahlung.</span>
-
-              <!-- <div class="h-4 w-4 bg-lemon rounded-full mr-2"></div>Der Dienstleister ist abhängig von der fortlaufenden Zahlung. -->
+              <span class="text-break whitespace-normal">{{ $t('allianceContent.bullet1') }}</span>
             </div>
             <div class="flex items-start ">
               <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
-              <span class="text-break whitespace-normal pl-2">Der Kunde ist abhängig vom Zugang
-                zum Dienstleister, da ein Wechsel mit hohen Kosten, Risiken und Unsicherheiten verbunden ist.</span>
-              <!-- <div class="h-4 w-4 bg-lemon rounded-full mr-2"></div>Der Dienstleister ist abhängig von der fortlaufenden Zahlung. -->
+              <span class="text-break whitespace-normal pl-2">{{ $t('allianceContent.bullet2') }}</span>
             </div>
           </div>
-          <!-- Second Paragraph -->
           <p class=" text-midnight-blue">
-            Diese Abhängigkeiten sind nicht nur ökonomisch problematisch. Sie sind strukturell riskant. Sicherheit darf
-            kein externer Service sein. Sie darf nicht ausgelagert, abgeschaltet oder ersetzt werden müssen.
+            {{ $t('allianceContent.paragraph2') }}
           </p>
         </div>
 
         <!-- Right Section -->
         <div class="space-y-6 ">
-          <h4 class="text-left text-h4 text-midnight-blue max-w-6xl leading-relaxed tracking-wide  mb-10 ">
-            Autonomie statt
-            Abhängigkeit
+          <h4 class="text-left text-h4 text-midnight-blue max-w-6xl leading-relaxed tracking-wide mb-10 whitespace-pre-line">
+            {{ $t('allianceContent.title2') }}
           </h4>
-          <!-- First Paragraph -->
           <p class=" text-midnight-blue mb-10">
-            Digitale Resilienz kann nur dort entstehen, wo Autonomie und Selbstbestimmung möglich sind. Wo Systeme
-            verstanden, kontrolliert und weiterentwickelt werden können
-            - unabhängig von einzelnen Anbietern oder Vertragsverhältnissen. Deshalb streben wir für unsere Partner -
-            nicht
-            für Kunden - nach:
+            {{ $t('allianceContent.paragraph3') }}
           </p>
           <div>
             <div class="flex items-start ">
               <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
-              <span class="text-break whitespace-normal">vollständigem Zugang zu Quellcode,
-                Architekturen und Forschungsständen</span>
+              <span class="text-break whitespace-normal">{{ $t('allianceContent.bullet3') }}</span>
             </div>
             <div class="flex items-center ">
               <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
-              <span class="text-break whitespace-normal">gemeinsamem Wissen statt proprietärer
-                Abschottung</span>
-
+              <span class="text-break whitespace-normal">{{ $t('allianceContent.bullet4') }}</span>
             </div>
             <div class="flex items-center ">
               <div class="flex items-center justify-center mt-2 w-6 h-6 ">
                 <div class="h-3 w-3 bg-lemon rounded-full"></div>
               </div>
-              <span class="text-break whitespace-normal">aktiver Mitgestaltung statt passiver Nutzung</span>
-
+              <span class="text-break whitespace-normal">{{ $t('allianceContent.bullet5') }}</span>
             </div>
-
           </div>
           <p class=" text-midnight-blue">
-            Nicht, weil wir uns damit ausliefern. Sondern weil wir kein Geld gegen Sicherheit tauschen und dadurch neue
-            Risiken schaffen wollen.
+            {{ $t('allianceContent.paragraph4') }}
           </p>
 
 
@@ -96,8 +69,7 @@
       
         </div>
       </div>
-      <h2 class="text-3xl max-md:font-bold md:text-h2 text-lomon max-w-6xl text-lemon text-left">UNSERE ANTWORT IST DIE
-        BRYTE ALLIANCE.</h2>
+      <h2 class="text-3xl max-md:font-bold md:text-h2 max-w-6xl text-lemon text-left whitespace-pre-line">{{ $t('allianceContent.title3') }}</h2>
 
       <!-- Alliance Image + Text Section -->
       <div class="flex flex-col lg:flex-row gap-12 mt-16 mb-20 ">
@@ -109,31 +81,19 @@
         <!-- Right: Text Content -->
         <div class="w-full lg:w-1/2 space-y-8 copytext-paragraph">
           <p class="text-midnight-blue">
-            Die <strong>BRYTEALLIANCE</strong> ist eine Allianz aus führenden Akteuren,
-            die sich bewusst gegenseitig befähigen, statt voneinander
-            abhängig zu werden. Gemeinsam arbeiten wir daran,
-            Autonomie zu stärken, Abhängigkeiten systematisch zu
-            reduzieren und digitale Sicherheit als dauerhafte Fähigkeit zu
-            verankern – nicht als Produkt. Wir glauben, dass Sicherheit
-            nicht durch Kontrolle von außen entsteht, sondern durch
-            Kompetenz, Transparenz und geteilte Verantwortung.
+            {{ $t('allianceContent.paragraph5') }}
           </p>
 
-          <h3 class="text-3xl max-md:font-bold md:text-h3 text-midnight-blue font-bold leading-tight">
-            Keine Lizenz.<br />
-            Ein europäisches<br />
-            Bündnis für digitale<br />
-            Autonomie.
+          <h3 class="text-3xl max-md:font-bold md:text-h3 text-midnight-blue font-bold leading-tight whitespace-pre-line">
+            {{ $t('allianceContent.title4') }}
           </h3>
 
           <p class="text-midnight-blue">
-            Wir laden Top-Player ein, die Verantwortung nicht delegieren,
-            sondern teilen wollen – und die gemeinsam mit uns und
-            unseren Partnern an einem autonomen Sicherheits-Technologie-Zentrum in Europa mitwirken möchten.
+            {{ $t('allianceContent.paragraph6') }}
           </p>
 
           <div class="pt-4">
-            <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+            <AppButton :text="$t('about.cta')" @click="handleButtonClick" />
           </div>
         </div>
       </div>
@@ -181,8 +141,7 @@
         </div>
       </div>
 
-      <h2 class="text-3xl max-md:font-bold md:text-h2 font-[800] text-lomon max-w-6xl text-lemon text-left mb-4">WIR SIND STOLZ AUF <br> UNSERE <span
-          class="text-midnight-blue">BÜNDNISPARTNER</span> IN DER BRYTE ALLIANCE</h2>
+      <h2 class="text-3xl max-md:font-bold md:text-h2 font-[800] max-w-6xl text-lemon text-left mb-4 whitespace-pre-line">{{ $t('allianceContent.title5') }} <span class="text-midnight-blue">{{ $t('allianceContent.title5Highlight') }}</span> {{ $t('allianceContent.title5Suffix') }}</h2>
 
       <!-- Partners Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mb-20">
