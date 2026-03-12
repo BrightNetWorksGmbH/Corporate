@@ -18,7 +18,7 @@
     <Transition name="menu-fade">
       <div
         v-if="isMenuOpen"
-        class="fixed inset-0 z-[90] w-full h-[calc(100vh-10%)] bg-clean-white overflow-y-auto overscroll-contain rounded-t-[30px] overflow-hidden"
+        class="fixed inset-0 z-[90] w-full h-[90vh] bg-midnight-blue overflow-y-auto overscroll-contain"
       >
         <!-- Language switcher: fixed top-left -->
         <div class="fixed top-6 left-6 z-[95]">
@@ -26,14 +26,14 @@
           <div class="relative">
             <button
               type="button"
-              class="flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-midnight-blue    transition-colors border-b border-midnight-blue/20 min-w-[140px]"
+              class="flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-clean-white    transition-colors border-b border-clean-white/20 min-w-[120px]"
               :aria-expanded="langDropdownOpen"
               aria-haspopup="listbox"
               aria-label="Select language"
               @click.stop="langDropdownOpen = !langDropdownOpen"
             >
               <span>{{ currentLocaleName }}</span>
-              <span class="transition-transform duration-200 text-midnight-blue" :class="{ 'rotate-180': langDropdownOpen }"><img src="/common/downarrow.svg" alt="Down Arrow" class="w-4 h-4" /></span>
+              <span class="transition-transform duration-200 text-clean-white" :class="{ 'rotate-180': !langDropdownOpen }"><img src="/white-icons/vector.svg" alt="Down Arrow" class="w-4 h-4" /></span>
             </button>
             <Transition name="lang-dropdown">
               <ul
@@ -55,7 +55,7 @@
                 <li>
                   <NuxtLink
                     :to="switchLocalePath('en')"
-                    class="flex items-center gap-2 px-4 py-2.5 text-sm font-bold transition-colors block"
+                    class="flex items-center gap-2 px-4 py-2.5 text-sm font-bold transition-colors "
                     :class="locale === 'en' ? 'text-lemon bg-midnight-blue/10' : 'text-midnight-blue hover:text-lemon hover:bg-midnight-blue/5'"
                     role="option"
                     @click="langDropdownOpen = false; $emit('close-menu')"
@@ -89,7 +89,8 @@
             v-for="page in pages"
             :key="page.path"
             :to="page.path"
-            class="group flex items-center justify-center gap-4 px-4 py-5 text-2xl md:text-h3 font-bold text-midnight-blue hover:text-lemon transition-colors duration-300 ease-in-out border-b border-midnight-blue/10 last:border-b-0"
+            class="group flex items-center justify-center gap-4 px-4 py-5 text-2xl md:text-h3 font-bold transition-colors duration-300 ease-in-out border-b border-midnight-blue/10 last:border-b-0"
+            :class="isPageActive(page) ? 'text-lemon' : 'text-clean-white hover:text-lemon'"
             @click="$emit('close-menu')"
           >
             <!-- Icons commented out for now -->
@@ -121,7 +122,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
   isMenuOpen: { type: Boolean, required: true },
@@ -130,10 +131,17 @@ const props = defineProps({
 
 defineEmits(['toggle-menu', 'close-menu'])
 
+const route = useRoute()
 const switchLocalePath = useSwitchLocalePath()
 const { locale, t } = useI18n()
 
 const langDropdownOpen = ref(false)
+
+const isPageActive = (page) => {
+  const currentPath = route.path.replace(/\/$/, '') || '/'
+  const pagePath = page.path.replace(/\/$/, '') || '/'
+  return currentPath === pagePath
+}
 
 const currentLocaleName = computed(() =>
   locale.value === 'de' ? t('language.de') : t('language.en')
@@ -141,6 +149,19 @@ const currentLocaleName = computed(() =>
 
 watch(() => props.isMenuOpen, (open) => {
   if (!open) langDropdownOpen.value = false
+
+  if (open) {
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.documentElement.style.overflow = ''
+    document.body.style.overflow = ''
+  }
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  document.documentElement.style.overflow = ''
+  document.body.style.overflow = ''
 })
 </script>
 
