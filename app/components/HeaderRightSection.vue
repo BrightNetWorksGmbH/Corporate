@@ -150,6 +150,8 @@ const currentLocaleName = computed(() =>
 watch(() => props.isMenuOpen, (open) => {
   if (!open) langDropdownOpen.value = false
 
+  if (typeof document === 'undefined') return
+
   if (open) {
     document.documentElement.style.overflow = 'hidden'
     document.body.style.overflow = 'hidden'
@@ -160,6 +162,7 @@ watch(() => props.isMenuOpen, (open) => {
 }, { immediate: true })
 
 onBeforeUnmount(() => {
+  if (typeof document === 'undefined') return
   document.documentElement.style.overflow = ''
   document.body.style.overflow = ''
 })
