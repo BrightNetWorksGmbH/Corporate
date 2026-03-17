@@ -4,7 +4,7 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[90vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
+        <section class="relative z-10 h-[95vh] flex items-center bg-contain bg-right bg-no-repeat bg-white" :style="{
             backgroundImage: `url('/alliancelanding.png')`
         }">
             <!-- White Overlay -->
@@ -16,11 +16,8 @@
                     <!-- Left Section: Title -->
                     <div class="space-y-6 lg:col-span-2">
                         <h1
-                            class="text-3xl md:text-4xl lg:text-8xl leading-relaxed tracking-[5px] font-[800] font-sans">
-                            <span class="text-lemon">DIGITALE<br />
-                                SICHERHEIT <br>IST PRESET FÜR</span><span class="text-midnight-blue"> HANDLUNGS-
-                                <br>FÄHIGKEIT.</span>
-
+                            class="text-2xl lg:text-[80px] leading-[1.3] tracking-[2px] font-[800] font-sans whitespace-pre-line">
+                            <span class="text-lemon">{{ $t('digitalAutonomy.hero.line1') }}</span><span class="text-midnight-blue"> {{ $t('digitalAutonomy.hero.line2') }}</span>
                         </h1>
                     </div>
 
@@ -44,9 +41,7 @@
         <main class="relative z-10">
             <div class="container mx-auto px-2 py-24 max-2xl:pb-60 leading-relaxed">
                 <h2 class="text-3xl max-md:font-bold md:text-h1 ">
-                    <span class="text-lemon">IN DIESEM JAHRTAUSEND IST SICHERHEIT NICHT KÄUFLICH. SIE BEGINNT UND
-                        ENDET
-                        IMMER MIT AUTONOMIE.</span>
+                    <span class="text-lemon">{{ $t('digitalAutonomy.mainHeadline') }}</span>
                 </h2>
             </div>
 

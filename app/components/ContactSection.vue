@@ -10,8 +10,8 @@
     <div
       class="relative z-10 container mx-auto w-full md:max-w-5xl flex flex-col justify-center items-center ">
       <!-- Title -->
-      <div class="text-center px-2 pt-5 mb-12">
-        <h3 class="text-h3 text-midnight-blue leading-relaxed whitespace-pre-line">
+      <div class="text-center px-2 pt-5 mb-12 ">
+        <h3 class="text-h4 md:text-h3 text-midnight-blue leading-relaxed whitespace-pre-line">
           {{ $t('contact.titleLine1') }}<br />
           {{ $t('contact.titleLine2') }}
         </h3>
