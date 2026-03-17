@@ -4,7 +4,7 @@
         <AppHeader />
 
         <!-- Hero Section -->
-        <section class="relative z-10 h-[90vh]  flex justify-center  items-center bg-cover bg-right bg-no-repeat bg-white  " :style="{
+        <section class="relative z-10 h-[95vh]  flex justify-center  items-center bg-cover bg-right bg-no-repeat bg-white  " :style="{
             backgroundImage: `url('/aufbagelanding.png')`
         }">
             <!-- White Overlay -->
@@ -82,12 +82,12 @@
             </div>
 
             <!-- Team Section -->
-            <div class="rounded-2xl bg-clean-white overflow-hidden">
+            <div class="relative z-20 rounded-2xl bg-clean-white overflow-hidden">
                 <TeamSection />
             </div>
 
             <!-- Contact Section -->
-            <div id="contact-section">
+            <div id="contact-section" class="relative z-10 -mt-10">
                 <ContactSection />
             </div>
         </main>

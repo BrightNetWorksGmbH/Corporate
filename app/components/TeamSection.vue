@@ -33,7 +33,7 @@ const teamMembers = computed(() => [
   { id: 2, name: 'Dirk Markus', position: t('team.positions.chiefOfStaff'), imageSrc: '/team/dirk.png' },
   { id: 3, name: 'Verena Menzel', position: t('team.positions.businessIntelligence'), imageSrc: '/team/verena.png' },
   { id: 4, name: 'Andreas Jacobi', position: t('team.positions.financeCfo'), imageSrc: '/team/stephan.png' },
-  { id: 5, name: 'Christoph Hempel', position: t('team.positions.businessIntegrity'), imageSrc: '/team/stephan.png' },
+  { id: 5, name: 'Christoph Hempel', position: t('team.positions.businessIntegrity'), imageSrc: '/team/christoph.png' },
 ])
 
 const handleMemberClick = (member) => {

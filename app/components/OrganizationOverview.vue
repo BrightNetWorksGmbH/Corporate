@@ -235,7 +235,7 @@ const departmentHeads = computed(() => [
     },
     {
         name: 'Christoph Hempel',
-        imageSrc: '/team/stephan.png',
+        imageSrc: '/team/christoph.png',
         domain: t('organizationOverview.legalEducation'),
         subtitle: t('organizationOverview.legalSubtitle')
     }

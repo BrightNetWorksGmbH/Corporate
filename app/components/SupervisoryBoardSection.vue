@@ -3,8 +3,8 @@
     <div class="container mx-auto">
       <!-- Title -->
       <h2 class="text-3xl max-md:font-bold md:text-h2 text-midnight-blue mb-12 text-center lg:text-left">
-        Sichtbare Selbstfindung. Unabhängige Kontrolle.
-        <span class="text-[lemon]">Unser Aufsichtsrat.</span>
+        {{ $t('supervisoryBoard.title') }}
+        <span class="text-[lemon]">{{ $t('supervisoryBoard.titleHighlight') }}</span>
       </h2>
 
       <!-- Dashed Border Box -->
@@ -17,8 +17,8 @@
               <img src="/team/stephan.png" alt="Stephan Tomat"
                 class="w-16 h-16  rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
               <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
-              <p class="text-sm text-midnight-blue mb-2">Aufsichtsrat</p>
-              <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
+              <p class="text-sm text-midnight-blue mb-2">{{ $t('supervisoryBoard.member') }}</p>
+              <p class="text-xs text-gray-500">{{ $t('supervisoryBoard.currentPosition') }}</p>
             </div>
 
             <!-- Supervisory Board Chairman (Middle) -->
@@ -26,8 +26,8 @@
               <img src="/team/stephan.png" alt="Stephan Tomat"
                 class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
               <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
-              <p class="text-sm text-midnight-blue mb-2">Aufsichtsratvorsitzender</p>
-              <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
+              <p class="text-sm text-midnight-blue mb-2">{{ $t('supervisoryBoard.chairman') }}</p>
+              <p class="text-xs text-gray-500">{{ $t('supervisoryBoard.currentPosition') }}</p>
             </div>
 
             <!-- Supervisory Board Member 3 -->
@@ -35,8 +35,8 @@
               <img src="/team/stephan.png" alt="Stephan Tomat"
                 class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
               <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
-              <p class="text-sm text-midnight-blue mb-2">Aufsichtsrat</p>
-              <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
+              <p class="text-sm text-midnight-blue mb-2">{{ $t('supervisoryBoard.member') }}</p>
+              <p class="text-xs text-gray-500">{{ $t('supervisoryBoard.currentPosition') }}</p>
             </div>
           </div>
         </div>
@@ -51,14 +51,14 @@
           <img src="/team/stephan.png" alt="Stephan Tomat"
             class="w-16 h-16 rounded-full object-left object-contain bg-black grayscale mb-4 border-2 border-gray-300" />
           <h3 class="text-lg font-bold text-midnight-blue mb-1">Stephan Tomat</h3>
-          <p class="text-sm text-midnight-blue mb-2">Vorstandsvorsitzender</p>
-          <p class="text-xs text-gray-500">CEO AKTUELLE POSITION</p>
+          <p class="text-sm text-midnight-blue mb-2">{{ $t('supervisoryBoard.ceo') }}</p>
+          <p class="text-xs text-gray-500">{{ $t('supervisoryBoard.currentPosition') }}</p>
         </div>
       </div>
 
       <!-- Bottom Text -->
       <p class="copytext-paragraph text-midnight-blue text-center max-w-4xl mx-auto">
-        Verantwortung entsteht dort, wo Führung, Kontrolle und Fachlichkeit klar voneinander getrennt sind.
+        {{ $t('supervisoryBoard.bottomText') }}
       </p>
     </div>
   </section>

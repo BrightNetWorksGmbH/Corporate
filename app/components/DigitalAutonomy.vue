@@ -4,7 +4,7 @@
       <!-- Title with Mixed Colors -->
       <h4
         class="text-left text-3xl max-md:font-bold md:text-h4 text-midnight-blue max-w-6xl leading-relaxed tracking-wide  mb-10 ">
-        Digitale Sicherheit ist in Europa keine <br> rein staatliche Aufgabe. Und darf es nicht sein.
+        {{ $t('digitalAutonomy.content.title') }}
       </h4>
       <!-- Top Section: Two Columns -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 copytext-paragraph">
@@ -12,26 +12,14 @@
         <div class="space-y-12 md:pr-10">
           <!-- Long Paragraph -->
           <p class="text-midnight-blue ">
-            Sie betrifft öffentliche Institutionen und private Unternehmen gleichermaßen, denn digitale Systeme,
-            Datenflüsse und technologische Entscheidungen prägen heute zentrale Bereiche von Wirtschaft, Verwaltung und
-            gesellschaftlichem Zusammenleben. Europäische Akteure tragen damit gemeinsame Verantwortung dafür, digitale
-            Infrastrukturen und Artefakte zu schützen, Systeme resilient gegenüber Angriffen zu gestalten und Daten als
-            das zu begreifen, was sie längst sind: eine strategische Ressource von globaler Bedeutung.
-            Diese Ressource entfaltet ihren Wert nicht nur in regulierten Märkten und legitimem Handel, sondern auch
-            dort, wo Kontrolle, Transparenz und Verantwortung fehlen. Schwarzmärkte, Missbrauchsszenarien und gezielte
-            Angriffe sind Teil derselben digitalen Realität. Sicherheit bedeutet daher nicht nur Schutz vor Ausfall,
-            sondern den bewussten Umgang mit Macht, Zugriff und Abhängigkeiten.
+            {{ $t('digitalAutonomy.content.paragraph1') }}
           </p>
 
 
 
           <!-- Second Paragraph -->
           <p class=" text-midnight-blue">
-            Gleichzeitig ist Europas digitale Infrastruktur in weiten Teilen von wenigen globalen Akteuren geprägt,
-            deren Geschäftsmodelle, Vertragsbedingungen und technische Architekturen nicht immer mit europäischen
-            Rechts- und Wertvorstellungen in Einklang stehen. Diese Situation ist historisch gewachsen; sie ist nicht
-            per se illegitim – sie ist jedoch strukturell relevant. Verantwortung und Handlungsspielräume liegen heute
-            vielfach außerhalb des europäischen Gestaltungsraums.
+            {{ $t('digitalAutonomy.content.paragraph2') }}
           </p>
         </div>
 
@@ -40,17 +28,10 @@
 
           <!-- First Paragraph -->
           <p class=" text-midnight-blue mb-10">
-            Architekturen nicht Immer mit europalschen kechts- una
-            Wertvorstellungen in Einklang stehen. Diese Situation ist historisch gewachsen, sie ist nicht per se
-            illegitim - sie ist jedoch strukturell relevant. Verantwortung und
-            Handlunasspielraume liegen heute vieltach aulsernalb des
-            europäischen Gestaltungsraums
+            {{ $t('digitalAutonomy.content.paragraph3') }}
           </p>
           <p class=" text-midnight-blue">
-            Eine zukunftsfähige Antwort darauf liegt weder in Abschottung noch in Konfrontation. Sie liegt in
-            Verantwortungsübernahme, institutioneller Reife und der Fähigkeit, digitale Souveränität so zu gestalten,
-            dass europäische Werte, rechtliche Anforderungen und technologische Unabhängigkeit miteinander vereinbar
-            bleiben.
+            {{ $t('digitalAutonomy.content.paragraph4') }}
           </p>
 
 
@@ -61,7 +42,7 @@
 
             <!-- Button -->
             <div class="pt-4 md:ml-8 w-full md:w-auto">
-              <AppButton text="Termin vereinbaren" @click="handleButtonClick" />
+              <AppButton :text="$t('mission.cta')" @click="handleButtonClick" />
             </div>
           </div>
         </div>

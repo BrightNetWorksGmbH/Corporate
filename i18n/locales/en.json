@@ -145,6 +145,48 @@
     "deepDataTitle": "DEEP DATA",
     "deepDataDesc": "Systems that make automation, AI and robotics safe and controllable for companies"
   },
+  "digitalAutonomy": {
+    "hero": {
+      "line1": "DIGITAL\nSECURITY\nIS A PREREQUISITE FOR",
+      "line2": "CAPABILITY TO ACT."
+    },
+    "mainHeadline": "IN THIS MILLENNIUM, SECURITY IS NOT FOR SALE. IT ALWAYS BEGINS AND ENDS WITH AUTONOMY.",
+    "content": {
+      "title": "Digital security in Europe is not a purely state task. And it must not be.",
+      "paragraph1": "It affects public institutions and private companies alike, for digital systems, data flows and technological decisions shape central areas of economy, administration and social coexistence today. European actors therefore share responsibility for protecting digital infrastructures and artefacts, designing systems to be resilient against attacks, and understanding data as what they have long been: a strategic resource of global importance. This resource unfolds its value not only in regulated markets and legitimate trade, but also where control, transparency and accountability are lacking. Black markets, abuse scenarios and targeted attacks are part of the same digital reality. Security therefore means not only protection against failure, but the conscious handling of power, access and dependencies.",
+      "paragraph2": "At the same time, Europe's digital infrastructure is largely shaped by a few global actors whose business models, contract terms and technical architectures do not always align with European legal and value frameworks. This situation has evolved historically; it is not per se illegitimate – but it is structurally relevant. Responsibility and scope for action today often lie outside the European sphere of influence.",
+      "paragraph3": "At the same time, Europe's digital infrastructure is largely shaped by a few global actors whose business models, contract terms and technical architectures do not always align with European legal and value frameworks. This situation has evolved historically; it is not per se illegitimate – but it is structurally relevant. Responsibility and scope for action today often lie outside the European sphere of influence.",
+      "paragraph4": "A future-proof response lies neither in isolation nor in confrontation. It lies in taking responsibility, institutional maturity and the ability to shape digital sovereignty so that European values, legal requirements and technological independence remain compatible with each other."
+    }
+  },
+  "governance": {
+    "hero": {
+      "line1": "GOVERNANCE\nDOES NOT BEGIN\nWITH RULES.\nBUT WITH",
+      "line2": "ATTITUDE."
+    },
+    "headline1": "CONTROL IS NOT DISTRUST.\nIT IS THE PREREQUISITE FOR",
+    "headline1Suffix": "TRUST.",
+    "headline2": "STRUCTURE IS NOT AN\nEND IN ITSELF,\nBUT THE PREREQUISITE\nFOR TRUST.",
+    "content": {
+      "paragraph1": "Digital security cannot be achieved through technical measures alone. It arises where power, responsibility and control are brought into a viable balance. For us, governance is therefore not a formal framework, but a conscious self-commitment. BRYTEARK did not emerge from nowhere. The organisation grew out of practical work within the BrightNetWorks network – from years of experience with complex digital systems, entrepreneurial responsibility and the question of how technological possibilities can be translated into resilient structures.",
+      "paragraph2": "This experience shapes our attitude to this day: Responsibility does not arise through delegation, but through commitment. Through clear roles, traceable decision-making processes and the willingness to limit oneself.",
+      "title": "Independent. Committed.\nResponsible.",
+      "paragraph3": "BRYTEARK operates as an independent platform with a clearly defined governance structure. The board and supervisory board are not formal instances, but an integral part of our chain of responsibility. BrightNetWorks today serves as a strategic space for experience and innovation – not as an operational pacemaker. Responsibility for direction, decisions and impact lies clearly with BRYTEARK. This conscious separation is not a break, but an expression of maturity.",
+      "responsibilityHeadline": "RESPONSIBILITY\nIS NOT A PROMISE.",
+      "paragraph4Bold": "It is a structure.",
+      "paragraph4Rest": "For us, governance means organising decisions so that they hold up under pressure. Not every decision has to be fast. But every one must be viable. That is why we consciously separate strategic leadership, specialist responsibility, operational implementation and independent control. Not to create complexity – but to make it manageable. Leadership at BRYTEARK does not mean bundling responsibility, but anchoring it where competence and impact come together.",
+      "paragraph5": "Those who build systems that have power over data, infrastructures and decisions must be willing to be scrutinised themselves. For us, governance therefore means not protection against the outside, but reliability towards the inside. We believe that digital power is only legitimate where it remains bound to responsibility. And that trust does not arise where rules are interpreted as flexibly as possible – but where attitude holds even when it becomes uncomfortable."
+    }
+  },
+  "supervisoryBoard": {
+    "title": "Visible self-reflection. Independent control.",
+    "titleHighlight": "Our supervisory board.",
+    "member": "Supervisory Board",
+    "chairman": "Chairman of Supervisory Board",
+    "ceo": "CEO",
+    "currentPosition": "CEO CURRENT POSITION",
+    "bottomText": "Responsibility arises where leadership, control and expertise are clearly separated from each other."
+  },
   "alliance": {
     "hero": {
       "line1": "ACCESS",
