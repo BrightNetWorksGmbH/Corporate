@@ -31,10 +31,10 @@
         <!-- Right Section -->
         <div class="space-y-4 h-full flex md:justify-center items-center">
           <nav class="flex flex-col gap-4">
-            <a
+            <NuxtLink
               v-for="link in navigationLinks"
-              :key="link.href"
-              :href="link.href"
+              :key="link.to"
+              :to="link.to"
               class="nav-link group inline-flex items-center gap-3 text-lg md:text-2xl leading-relaxed text-midnight-blue hover:text-lemon active:text-midnight-blue transition-colors duration-300 ease-in-out font-bold underline"
             >
               <!-- Icon container: bulletright default, downarrow on hover/active, smooth crossfade -->
@@ -49,7 +49,7 @@
                 </span>
               </span>
               <span class="underline">{{ link.text }}</span>
-            </a>
+            </NuxtLink>
           </nav>
         </div>
       </div>
@@ -61,12 +61,13 @@
 import { computed } from 'vue'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const navigationLinks = computed(() => [
-  { text: t('about.link1'), href: '#unsere-aufgabe' },
-  { text: t('about.link2'), href: '#verantwortung-governance' },
-  { text: t('about.link3'), href: '#themen-produkteinblick' },
-  { text: t('about.link4'), href: '#digitale-sicherheit' },
+  { text: t('about.link1'), to: localePath('/aufgabe') },
+  { text: t('about.link2'), to: localePath('/governance') },
+  { text: t('about.link3'), to: localePath('/alliance') },
+  { text: t('about.link4'), to: localePath('/digital-autonomy') },
 ])
 
 const handleButtonClick = () => {

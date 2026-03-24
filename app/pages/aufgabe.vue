@@ -60,7 +60,8 @@
                 <h2 class="text-4xl max-md:font-bold md:text-h1 leading-relaxed whitespace-pre-line">
                     <span class="text-lemon">{{ $t('aufgabe.responsibilityLemon') }}</span>
                     <span class="text-clean-white">{{ $t('aufgabe.responsibilityWhite') }}</span>
-                    <span class="text-lemon"> {{ $t('aufgabe.responsibilityLemon2') }}</span>
+                    {{ ' ' }}
+                    <span class="text-lemon">{{ $t('aufgabe.responsibilityLemon2') }}</span>
                 </h2>
             </div>
             <OrganizationOverview />
