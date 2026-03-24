@@ -3,7 +3,12 @@
     "hero": {
       "titleLine1": "We are:",
       "titleLine2": "Europe's Powerhouse for Data Resilience",
-      "description": "In a world where data has become a weapon, currency, and tool of power, European companies need more than protection: they need resilience. BryteArk AG is the answer – the powerhouse for data resilience, built on responsibility, structure, and technological expertise."
+      "description": "In a world where data has become a weapon, currency, and tool of power, European companies need more than protection: they need resilience. BryteArk AG is the answer – the powerhouse for data resilience, built on responsibility, structure, and technological expertise.",
+      "descriptionIntro": "In a world where data has become a weapon, currency, and tool of power, European companies need more than protection: they need resilience. ",
+      "descriptionStrong1": "BryteArk AG is the answer",
+      "descriptionMiddle": " – the ",
+      "descriptionStrong2": "powerhouse for data resilience",
+      "descriptionOutro": ", built on responsibility, structure, and technological expertise."
     }
   },
   "header": {
@@ -22,7 +27,7 @@
   "statistics": {
     "bar1": "of the digital tools that European companies use daily are not subject to European law – they are operated in the USA or China.",
     "bar2": "of European companies state that they do not possess true data sovereignty – their core processes depend on non-European cloud or AI providers.",
-    "bar3": "of world GDP – the global damages from cybercrime reported annually, trend rising. This corresponds to approximately 8 trillion US dollars."
+    "bar3": "are the global damages from cybercrime reported annually - trend rising. This equals 8% of global GDP!"
   },
   "brytegate": {
     "tokenPlaceholder": "Type in Token",

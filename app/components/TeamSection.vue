@@ -9,7 +9,7 @@
       </div>
 
       <!-- Team Members Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 ">
         <TeamMemberCard
           v-for="member in teamMembers"
           :key="member.id"
@@ -32,7 +32,7 @@ const teamMembers = computed(() => [
   { id: 1, name: 'Stephan Tomat', position: t('team.positions.vorstand'), imageSrc: '/team/stephan.png' },
   { id: 2, name: 'Dirk Markus', position: t('team.positions.chiefOfStaff'), imageSrc: '/team/dirk.png' },
   { id: 3, name: 'Verena Menzel', position: t('team.positions.businessIntelligence'), imageSrc: '/team/verena.png' },
-  { id: 4, name: 'Andreas Jacobi', position: t('team.positions.financeCfo'), imageSrc: '/team/stephan.png' },
+  { id: 4, name: 'Andreas Jacobi', position: t('team.positions.financeCfo'), imageSrc: '/team/andreas.png' },
   { id: 5, name: 'Christoph Hempel', position: t('team.positions.businessIntegrity'), imageSrc: '/team/christoph.png' },
 ])
 

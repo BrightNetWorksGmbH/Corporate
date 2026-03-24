@@ -10,16 +10,20 @@
         <div class="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-end  min-h-[80vh]  ">
           <!-- Left Section: Title and Description -->
           <div class="space-y-6 h-full flex flex-col justify-center items-start ">
-            <h3 class="h3-headline text-midnight-blue">
+            <h3 class="h3-headline text-midnight-blue leading-[1.5]">
               {{ $t('home.hero.titleLine1') }}<br />
               {{ $t('home.hero.titleLine2') }}
             </h3>
-            <p class="text-start text-midnight-blue  max-w-2xl">
-              {{ $t('home.hero.description') }}
+            <p class="text-start text-midnight-blue max-w-2xl leading-[2.1]">
+              <span>{{ $t('home.hero.descriptionIntro') }}</span>
+              <strong class="font-bold">{{ $t('home.hero.descriptionStrong1') }}</strong>
+              <span>{{ $t('home.hero.descriptionMiddle') }}</span>
+              <strong class="font-bold">{{ $t('home.hero.descriptionStrong2') }}</strong>
+              <span>{{ $t('home.hero.descriptionOutro') }}</span>
             </p>
             <!-- Inverted Triangle SVG -->
             <div class="mt-6 flex justify-center w-full relative ">
-              <img src="/common/downarrow.svg" alt="EU Flag" class="w-28 h-24" />
+              <img src="/common/downarrow.png" alt="down arrow icon" class="w-28 h-24" />
             </div>
           </div>
           <div class="flex justify-center lg:justify-end py-4 h-full items-end lg:col-span-1 ">
