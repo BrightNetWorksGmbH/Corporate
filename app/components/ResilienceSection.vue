@@ -37,7 +37,7 @@
                     <!-- Link with Icon -->
                     <a href="#"
                         class="flex items-center gap-2 text-midnight-blue hover:opacity-80 transition-opacity group text-xl">
-                        <img src="/common/downarrow.svg" alt="arrow down" class="w-6 h-6" />
+                        <img src="/common/downarrow.png" alt="arrow down" class="w-6 h-6" />
                         <span class="underline">{{ $t('resilience.contactLink') }}</span>
                     </a>
                 </div>

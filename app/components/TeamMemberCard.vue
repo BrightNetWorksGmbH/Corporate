@@ -1,18 +1,18 @@
 <template>
   <div class="flex flex-col items-start overflow-hidden">
     <!-- Portrait Image -->
-    <div class="w-full flex justify-start aspect-square overflow-hidden  bg-black">
+    <div class="w-full  md:h-[300px] flex justify-start overflow-hidden bg-black">
       <img
         :src="imageSrc"
         :alt="name"
-        class="w-full  object-contain bg-no-repeat grayscale"
+        class="w-full h-full object-cover object-center bg-no-repeat grayscale"
       />
     </div>
 
     <!-- Name and Position -->
-    <div class="text-start ">
-      <h3 class="text-midnight-blue font-bold   text-2xl">{{ name }}</h3>
-      <p class="text-midnight-blue text-2xl whitespace-nowrap mb-1">{{ position }}</p>
+    <div class="text-start py-2">
+      <h3 class="text-midnight-blue font-bold   text-xl">{{ name }}</h3>
+      <p class="text-midnight-blue text-lg whitespace-nowrap ">{{ position }}</p>
     </div>
 
     <!-- REQUEST DATA Button -->

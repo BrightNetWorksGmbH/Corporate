@@ -3,7 +3,12 @@
     "hero": {
       "titleLine1": "Wir sind:",
       "titleLine2": "Europas Powerhouse für Daten-Resilienz",
-      "description": "In einer Welt, in der Daten zu Waffen, Währungen und Machtmitteln geworden sind, brauchen europäische Unternehmen mehr als Schutz: Es braucht Resilienz. Die BryteArk AG ist die Antwort - das Powerhouse für Daten-Resilienz, gebaut auf Verantwortung, Struktur und technologischem Können."
+      "description": "In einer Welt, in der Daten zu Waffen, Währungen und Machtmitteln geworden sind, brauchen europäische Unternehmen mehr als Schutz: Es braucht Resilienz. Die BryteArk AG ist die Antwort - das Powerhouse für Daten-Resilienz, gebaut auf Verantwortung, Struktur und technologischem Können.",
+      "descriptionIntro": "In einer Welt, in der Daten zu Waffen, Währungen und Machtmitteln geworden sind, brauchen europäische Unternehmen mehr als Schutz: Es braucht Resilienz. ",
+      "descriptionStrong1": "Die BryteArk AG ist die Antwort",
+      "descriptionMiddle": " - das ",
+      "descriptionStrong2": "Powerhouse für Daten-Resilienz",
+      "descriptionOutro": ", gebaut auf Verantwortung, Struktur und technologischem Können."
     }
   },
   "header": {
@@ -22,7 +27,7 @@
   "statistics": {
     "bar1": "der digitalen Werkzeuge, die europäische Unternehmen täglich nutzen, unterliegen nicht dem europäischen Recht - sie werden in den USA oder China betrieben",
     "bar2": "der europäischen Unternehmen geben an, keine echte Datensouveränität zu besitzen - ihre Kernprozesse sind von außereuropäischen Cloud- oder KI-Anbietern abhängig.",
-    "bar3": "des Welt-BIP betragen die globalen Schäden durch Cybercrime jährlich, die gemeldet werden - Tendenz steigend. Das entspricht umgerechnet rund 8 Billionen US"
+    "bar3": "betragen die globalen Schäden durch Cybercrime jährlich, die gemeldet werden - Tendenz steigend. Das entspricht 8% des Welt-BIP!"
   },
   "brytegate": {
     "tokenPlaceholder": "Type in Token",

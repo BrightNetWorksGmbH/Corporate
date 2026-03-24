@@ -7,9 +7,9 @@
           class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
           :class="{ 'bar-fill--active': hasAnimated }"
         />
-        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+        <div class="relative flex flex-col md:flex-row  gap-x-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
           <h2 class="text-h2 text-midnight-blue">{{ displayVal1 }}%</h2>
-          <p class="text-midnight-blue text-lg leading-relaxed">
+          <p class="text-midnight-blue text-xs leading-relaxed max-w-[300px]">
             {{ $t('statistics.bar1') }}
           </p>
         </div>
@@ -21,9 +21,9 @@
           class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
           :class="{ 'bar-fill--active': hasAnimated }"
         />
-        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+        <div class="relative flex flex-col md:flex-row  gap-x-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
           <h2 class="text-h2 text-midnight-blue">{{ displayVal2 }}%</h2>
-          <p class="text-midnight-blue text-lg leading-relaxed">
+          <p class="text-midnight-blue text-xs leading-relaxed max-w-[300px]">
             {{ $t('statistics.bar2') }}
           </p>
         </div>
@@ -35,9 +35,12 @@
           class="absolute inset-y-0 right-0 bg-gradient-to-r from-[#E29B49] to-[#E2C649] bar-fill bar-fill--right"
           :class="{ 'bar-fill--active': hasAnimated }"
         />
-        <div class="relative flex flex-col md:flex-row items-center gap-6 px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
-          <h2 class="text-h2 text-midnight-blue">{{ displayVal3Formatted }}%</h2>
-          <p class="text-midnight-blue text-lg leading-relaxed">
+        <div class="relative flex flex-col   px-4 md:px-12 py-5 bar-content" :class="{ 'bar-content--visible': contentVisible }">
+          <h2 class="text-h2 text-midnight-blue">
+            <span class="md:hidden">{{ mobileBar3Amount }}</span>
+            <span class="hidden md:inline">{{ displayVal3Formatted }} $</span>
+          </h2>
+          <p class="text-midnight-blue text-xs leading-relaxed max-w-[300px]">
             {{ $t('statistics.bar3') }}
           </p>
         </div>
@@ -49,6 +52,8 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
+const { locale } = useI18n()
+
 const sectionRef = ref(null)
 const hasAnimated = ref(false)
 const contentVisible = ref(false)
@@ -57,12 +62,16 @@ const displayVal1 = ref(0)
 const displayVal2 = ref(0)
 const displayVal3 = ref(0)
 
-const TARGETS = [90, 72, 8]
+const TARGETS = [90, 72, 8_000_000_000_000]
 const BAR_DURATION_MS = 1600
 const COUNT_DURATION_MS = 2200
 
 const displayVal3Formatted = computed(() =>
-  String(displayVal3.value).padStart(2, '0')
+  new Intl.NumberFormat('de-DE').format(displayVal3.value)
+)
+
+const mobileBar3Amount = computed(() =>
+  locale.value === 'de' ? '8B $' : '8T $'
 )
 
 let observer = null

@@ -6,7 +6,7 @@
         <!-- Left: EU Logo with texts -->
         <div class="hidden md:flex items-center justify-start gap-3">
           <img src="/common/euflag.svg" alt="EU Flag" class="w-12 h-12" />
-          <p class="text-[10px] font-semibold text-blueish-gray">
+          <p class="text-[10px]  text-midnight-blue">
             {{ $t('header.euBannerLine1') }}
             <br>{{ $t('header.euBannerLine2') }}
             <br>{{ $t('header.euBannerLine3') }}
