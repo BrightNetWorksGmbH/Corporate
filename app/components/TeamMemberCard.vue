@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-start overflow-hidden">
     <!-- Portrait Image -->
-    <div class="w-full  md:h-[300px] flex justify-start overflow-hidden bg-black">
+    <div class="w-full  md:h-[310px] md:max-w-[280px] flex justify-start overflow-hidden bg-black">
       <img
         :src="imageSrc"
         :alt="name"
