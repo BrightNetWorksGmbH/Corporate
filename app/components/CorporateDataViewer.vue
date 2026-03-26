@@ -3,7 +3,7 @@
     v-if="hasAnyContent"
     class="relative z-10 bg-midnight-blue py-20 px-4"
   >
-    <div class="container mx-auto max-w-5xl space-y-16">
+    <div class="container mx-auto  space-y-16">
 
       <!-- ── Section header ── -->
       <div class="text-center space-y-3">
@@ -121,7 +121,7 @@
             :disabled="downloadingAll"
             class="flex items-center gap-2 bg-lemon text-midnight-blue px-5 py-2.5 rounded-[10px] text-xs font-bold transition-all hover:bg-lemon/90 disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
           >
-            <img src="/common/whitedonwarrow.svg" alt="" class="w-4 h-4" />
+            <img src="/common/downarrow.png" alt="" class="w-4 h-4" />
             <span v-if="downloadingAll">{{ $t('corporate.dataViewer.downloading') }}</span>
             <span v-else>{{ $t('corporate.dataViewer.downloadAll') }}</span>
           </button>
@@ -158,10 +158,10 @@
             <!-- Individual download -->
             <button
               @click="downloadSingleFile(file)"
-              class="flex-shrink-0 ml-4 flex items-center gap-1.5 bg-clean-white/10 hover:bg-lemon hover:text-midnight-blue px-4 py-2 rounded-[8px] text-clean-white text-xs font-semibold transition-all group-hover:bg-lemon/10"
+              class="flex-shrink-0 ml-4 flex items-center gap-1.5 bg-clean-white/10 hover:bg-lemon hover:text-white px-4 py-2 rounded-[8px] text-clean-white text-xs font-semibold transition-all group-hover:bg-lemon/50"
               :title="$t('corporate.dataViewer.downloadFile')"
             >
-              <img src="/common/whitedonwarrow.svg" alt="" class="w-3.5 h-3.5 opacity-70" />
+              <img src="/common/whitedonwarrow.svg" alt="" class="w-3.5 h-3.5 " />
               {{ $t('corporate.dataViewer.download') }}
             </button>
           </div>

@@ -17,7 +17,7 @@
         <AppHeader />
 
         <!-- ── Hero / Landing Section ── -->
-        <section class="w-full relative z-10 min-h-[100vh] mb-5 px-4 pt-24 flex flex-col items-center">
+        <section class="w-full relative z-10 min-h-[100vh] mb-5 px-4 pt-24 flex flex-col items-center ">
           <div class="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-end min-h-[80vh]">
 
             <!-- Left: Logo + Personalised Welcome -->
