@@ -83,6 +83,65 @@
   "common": {
     "understandMore": "Understand more"
   },
+  "corporate": {
+    "landing": {
+      "greeting": "Welcome, dear {name}.",
+      "descriptionWithCompany": "This is a personalised corporate instance for {name}, {company}. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
+      "descriptionNoCompany": "This is a personalised corporate instance for {name}. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
+      "rightGreeting": "Welcome, dear {name}.",
+      "rightDescriptionWithCompany": "This is a personalised corporate instance for {name}, {company}.",
+      "rightDescriptionNoCompany": "This is a personalised corporate instance for {name}.",
+      "rightConfirm": "By continuing, you confirm the use in accordance with the declaration of intent.",
+      "rightNice": "Nice to have you here."
+    },
+    "card": {
+      "greeting": "Hello {name}. You are a personal guest of {manager}.",
+      "managerFallback": "BryteArk",
+      "statusLine1": "Connection established. No personal data transferred.",
+      "statusLine2": "Private by default."
+    },
+    "nda": {
+      "pageTitle": "Declaration of Intent",
+      "loading": "Loading...",
+      "greeting": "Welcome, dear {name}.",
+      "descriptionWithCompany": "This is a personalised corporate instance for {name}, {company}.",
+      "descriptionNoCompany": "This is a personalised corporate instance for {name}.",
+      "confirmText": "By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
+      "declarationText": "I hereby declare my consent to use this personalised corporate instance of BryteArk AG. I confirm that the contents of this page are made available to me exclusively for personal, confidential use. Sharing or reproducing the provided information, files or data with third parties is not permitted without the express written consent of BryteArk AG. I acknowledge that my access is logged and applies exclusively to the purpose stated herein. The use of this instance is in accordance with the principles of the GDPR and European data protection law.",
+      "checkboxLabel": "I have read the declaration of intent and agree to it. I confirm that I am authorised to access this personalised corporate instance.",
+      "acceptButton": "Confirm & Continue",
+      "submitting": "Processing...",
+      "submitError": "An error occurred. Please try again."
+    },
+    "dataViewer": {
+      "title": "Your Personal Data",
+      "subtitle": "Only you have access to the data made available to you.",
+      "contactsTitle": "Contact Information",
+      "contactsSubtitle": "Personal information shared with you",
+      "saveAll": "Save to Phone",
+      "downloadContact": "Download contact",
+      "filesTitle": "Documents",
+      "filesSubtitle": "Shared files available for download",
+      "downloadAll": "Download All Files",
+      "download": "Download",
+      "downloading": "Downloading...",
+      "downloadFile": "Download file",
+      "privacyNote": "You only have access to data as granted to you by purpose. Private by default.",
+      "name": "Name",
+      "role": "Role",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "error": {
+      "notFound": "This corporate instance was not found.",
+      "unavailable": "This corporate instance is not available.",
+      "revoked": "Your access to this corporate instance has been revoked.",
+      "expired": "This corporate instance has expired.",
+      "disabled": "This corporate instance is no longer active.",
+      "generic": "An error occurred. Please contact the sender."
+    }
+  },
   "aufgabe": {
     "hero": {
       "line1": "A NEW ERA",

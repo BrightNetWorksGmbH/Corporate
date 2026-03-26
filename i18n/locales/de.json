@@ -83,6 +83,65 @@
   "common": {
     "understandMore": "Mehr erfahren"
   },
+  "corporate": {
+    "landing": {
+      "greeting": "Willkommen, lieber {name}.",
+      "descriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
+      "descriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
+      "rightGreeting": "Willkommen, lieber {name}.",
+      "rightDescriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}.",
+      "rightDescriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}.",
+      "rightConfirm": "Durch Fortfahren bestätigen Sie die Nutzung gemäß der Willenserklärung.",
+      "rightNice": "Schön, dass Sie hier sind."
+    },
+    "card": {
+      "greeting": "Hallo {name}. Du bist persönlicher Gast von {manager}.",
+      "managerFallback": "BryteArk",
+      "statusLine1": "Verbindung hergestellt. Keine persönlichen Daten übertragen.",
+      "statusLine2": "Private by default."
+    },
+    "nda": {
+      "pageTitle": "Willenserklärung",
+      "loading": "Lade Daten...",
+      "greeting": "Willkommen, lieber {name}.",
+      "descriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}.",
+      "descriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}.",
+      "confirmText": "Durch Fortfahren bestätigen Sie die Nutzung gemäß der Willenserklärung. Schön, dass Sie da sind.",
+      "declarationText": "Ich erkläre hiermit mein Einverständnis zur Nutzung dieser personalisierten Corporate-Instanz der BryteArk AG. Ich bestätige, dass mir die Inhalte dieser Seite ausschließlich für den persönlichen, vertraulichen Gebrauch zur Verfügung gestellt werden. Eine Weitergabe oder Vervielfältigung der bereitgestellten Informationen, Dateien oder Daten an Dritte ist ohne ausdrückliche schriftliche Genehmigung der BryteArk AG nicht gestattet. Ich nehme zur Kenntnis, dass mein Zugang protokolliert wird und ausschließlich für den hier genannten Zweck gilt. Die Nutzung dieser Instanz erfolgt in Übereinstimmung mit den Grundsätzen der DSGVO und dem europäischen Datenschutzrecht.",
+      "checkboxLabel": "Ich habe die Willenserklärung gelesen und stimme ihr zu. Ich bestätige, dass ich berechtigt bin, auf diese personalisierte Corporate-Instanz zuzugreifen.",
+      "acceptButton": "Bestätigen & Fortfahren",
+      "submitting": "Wird verarbeitet...",
+      "submitError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "dataViewer": {
+      "title": "Ihre persönlichen Daten",
+      "subtitle": "Nur Sie haben Zugriff auf die Ihnen zur Verfügung gestellten Daten.",
+      "contactsTitle": "Kontaktdaten",
+      "contactsSubtitle": "Persönliche Informationen, die mit Ihnen geteilt wurden",
+      "saveAll": "Auf Telefon speichern",
+      "downloadContact": "Kontakt herunterladen",
+      "filesTitle": "Dokumente",
+      "filesSubtitle": "Freigegebene Dateien, die Sie herunterladen können",
+      "downloadAll": "Alle Dateien herunterladen",
+      "download": "Herunterladen",
+      "downloading": "Wird heruntergeladen...",
+      "downloadFile": "Datei herunterladen",
+      "privacyNote": "Sie haben nur Zugriff auf Daten, die Ihnen zweckgebunden zur Verfügung gestellt wurden. Private by default.",
+      "name": "Name",
+      "role": "Funktion",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse"
+    },
+    "error": {
+      "notFound": "Diese Corporate-Instanz wurde nicht gefunden.",
+      "unavailable": "Diese Corporate-Instanz ist nicht verfügbar.",
+      "revoked": "Ihr Zugang zu dieser Corporate-Instanz wurde widerrufen.",
+      "expired": "Diese Corporate-Instanz ist abgelaufen.",
+      "disabled": "Diese Corporate-Instanz ist nicht mehr aktiv.",
+      "generic": "Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie den Absender."
+    }
+  },
   "aufgabe": {
     "hero": {
       "line1": "A NEW ERA",
