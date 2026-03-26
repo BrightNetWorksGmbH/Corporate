@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const isMenuOpen = ref(false)
 const showMinimalBar = ref(false)
@@ -60,16 +60,7 @@ const SCROLL_THRESHOLD = 120
 let lastScrollY = 0
 let ticking = false
 
-const { t } = useI18n()
-const localePath = useLocalePath()
-
-const pages = computed(() => [
-  { name: t('nav.home'), path: localePath('/') },
-  { name: t('nav.alliance'), path: localePath('/alliance') },
-  { name: t('nav.aufgabe'), path: localePath('/aufgabe') },
-  { name: t('nav.digitalAutonomy'), path: localePath('/digital-autonomy') },
-  { name: t('nav.governance'), path: localePath('/governance') },
-])
+const { pages } = useCorporateNav()
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
