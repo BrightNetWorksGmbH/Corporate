@@ -23,30 +23,41 @@
             <!-- Left: Logo + Personalised Welcome -->
             <div class="space-y-6 h-full flex flex-col justify-center items-start">
 
-              <!-- Client logo if available -->
-              <div v-if="corporateData.client_logo_url" class="mb-2">
+              <!-- Client logo (only when URL is non-empty) -->
+              <div v-if="logoUrl" class="mb-2">
                 <img
-                  :src="corporateData.client_logo_url"
-                  :alt="corporateData.client_company || corporateData.client_name"
+                  :src="logoUrl"
+                  :alt="logoAlt"
                   class="max-h-20 max-w-[200px] object-contain"
                 />
               </div>
 
-              <!-- Personalised headline -->
+              <!-- Headline: personalised or default when no client name -->
               <h3 class="h3-headline text-midnight-blue leading-[1.4]">
-                {{ $t('corporate.landing.greeting', { name: corporateData.client_name }) }}
+                <template v-if="hasClientName">
+                  {{ $t('corporate.landing.greeting', { name: clientDisplayName }) }}
+                </template>
+                <template v-else>
+                  {{ $t('corporate.landing.greetingNoName') }}
+                </template>
               </h3>
 
-              <!-- Personalised description -->
+              <!-- Description: four combinations of name / company -->
               <p class="text-start text-midnight-blue max-w-2xl leading-[2.1]">
-                <span v-if="corporateData.client_company">
+                <span v-if="hasClientName && hasClientCompany">
                   {{ $t('corporate.landing.descriptionWithCompany', {
-                    name: corporateData.client_name,
-                    company: corporateData.client_company,
+                    name: clientDisplayName,
+                    company: clientCompanyDisplay,
                   }) }}
                 </span>
+                <span v-else-if="hasClientName && !hasClientCompany">
+                  {{ $t('corporate.landing.descriptionNoCompany', { name: clientDisplayName }) }}
+                </span>
+                <span v-else-if="!hasClientName && hasClientCompany">
+                  {{ $t('corporate.landing.descriptionCompanyOnly', { company: clientCompanyDisplay }) }}
+                </span>
                 <span v-else>
-                  {{ $t('corporate.landing.descriptionNoCompany', { name: corporateData.client_name }) }}
+                  {{ $t('corporate.landing.descriptionGeneric') }}
                 </span>
               </p>
 
@@ -81,7 +92,7 @@
               <div class="flex justify-center lg:justify-end">
                 <BryteGateCard
                   :corporate-mode="true"
-                  :client-name="corporateData.client_name"
+                  :client-name="hasClientName ? clientDisplayName : undefined"
                   :manager-name="corporateData.manager?.name ?? ''"
                 />
               </div>
@@ -141,7 +152,17 @@ const { data: instanceResponse, error: fetchError } = await useFetch<{
 })
 
 const corporateData = computed(() => instanceResponse.value?.data ?? null)
-// console.log("corporateData", corporateData.value)
+
+const clientDisplayName = computed(() => corporateData.value?.client_name?.trim() ?? '')
+const clientCompanyDisplay = computed(() => corporateData.value?.client_company?.trim() ?? '')
+const hasClientName = computed(() => clientDisplayName.value.length > 0)
+const hasClientCompany = computed(() => clientCompanyDisplay.value.length > 0)
+const logoUrl = computed(() => corporateData.value?.client_logo_url?.trim() ?? '')
+const logoAlt = computed(() => {
+  if (clientCompanyDisplay.value) return clientCompanyDisplay.value
+  if (clientDisplayName.value) return clientDisplayName.value
+  return 'Company logo'
+})
 
 // Keep store in sync (for components that read from store)
 watchEffect(() => {
@@ -169,10 +190,10 @@ const errorMessage = computed(() => {
 
 // ── Page meta ─────────────────────────────────────────────────────────────────
 useHead({
-  title: computed(() =>
-    corporateData.value
-      ? `${corporateData.value.client_name} — BryteArk`
-      : 'BryteArk Corporate',
-  ),
+  title: computed(() => {
+    if (!corporateData.value) return 'BryteArk Corporate'
+    const name = corporateData.value.client_name?.trim()
+    return name ? `${name} — BryteArk` : 'BryteArk Corporate'
+  }),
 })
 </script>

@@ -86,8 +86,11 @@
   "corporate": {
     "landing": {
       "greeting": "Willkommen, lieber {name}.",
+      "greetingNoName": "Willkommen.",
       "descriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
       "descriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
+      "descriptionCompanyOnly": "Dies ist eine personalisierte Corporate-Instanz für {company}. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
+      "descriptionGeneric": "Dies ist eine personalisierte Corporate-Instanz. Durch Fortfahren mit den hier dargestellten Inhalten stimmen Sie der Identifizierung gemäß Willenserklärung zu. Schön, dass Sie da sind.",
       "rightGreeting": "Willkommen, lieber {name}.",
       "rightDescriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}.",
       "rightDescriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}.",
@@ -96,6 +99,7 @@
     },
     "card": {
       "greeting": "Hallo {name}. Du bist persönlicher Gast von {manager}.",
+      "greetingNoClient": "Willkommen. Du bist persönlicher Gast von {manager}.",
       "managerFallback": "BryteArk",
       "statusLine1": "Verbindung hergestellt. Keine persönlichen Daten übertragen.",
       "statusLine2": "Private by default."
@@ -104,8 +108,11 @@
       "pageTitle": "Willenserklärung",
       "loading": "Lade Daten...",
       "greeting": "Willkommen, lieber {name}.",
+      "greetingNoName": "Willkommen.",
       "descriptionWithCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}, {company}.",
       "descriptionNoCompany": "Dies ist eine personalisierte Corporate-Instanz für {name}.",
+      "descriptionCompanyOnly": "Dies ist eine personalisierte Corporate-Instanz für {company}.",
+      "descriptionGeneric": "Dies ist eine personalisierte Corporate-Instanz.",
       "confirmText": "Durch Fortfahren bestätigen Sie die Nutzung gemäß der Willenserklärung. Schön, dass Sie da sind.",
       "declarationText": "Ich erkläre hiermit mein Einverständnis zur Nutzung dieser personalisierten Corporate-Instanz der BryteArk AG. Ich bestätige, dass mir die Inhalte dieser Seite ausschließlich für den persönlichen, vertraulichen Gebrauch zur Verfügung gestellt werden. Eine Weitergabe oder Vervielfältigung der bereitgestellten Informationen, Dateien oder Daten an Dritte ist ohne ausdrückliche schriftliche Genehmigung der BryteArk AG nicht gestattet. Ich nehme zur Kenntnis, dass mein Zugang protokolliert wird und ausschließlich für den hier genannten Zweck gilt. Die Nutzung dieser Instanz erfolgt in Übereinstimmung mit den Grundsätzen der DSGVO und dem europäischen Datenschutzrecht.",
       "checkboxLabel": "Ich habe die Willenserklärung gelesen und stimme ihr zu. Ich bestätige, dass ich berechtigt bin, auf diese personalisierte Corporate-Instanz zuzugreifen.",
