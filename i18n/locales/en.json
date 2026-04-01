@@ -86,8 +86,11 @@
   "corporate": {
     "landing": {
       "greeting": "Welcome, dear {name}.",
+      "greetingNoName": "Welcome.",
       "descriptionWithCompany": "This is a personalised corporate instance for {name}, {company}. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
       "descriptionNoCompany": "This is a personalised corporate instance for {name}. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
+      "descriptionCompanyOnly": "This is a personalised corporate instance for {company}. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
+      "descriptionGeneric": "This is a personalised corporate instance. By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
       "rightGreeting": "Welcome, dear {name}.",
       "rightDescriptionWithCompany": "This is a personalised corporate instance for {name}, {company}.",
       "rightDescriptionNoCompany": "This is a personalised corporate instance for {name}.",
@@ -96,6 +99,7 @@
     },
     "card": {
       "greeting": "Hello {name}. You are a personal guest of {manager}.",
+      "greetingNoClient": "Welcome. You are a personal guest of {manager}.",
       "managerFallback": "BryteArk",
       "statusLine1": "Connection established. No personal data transferred.",
       "statusLine2": "Private by default."
@@ -104,8 +108,11 @@
       "pageTitle": "Declaration of Intent",
       "loading": "Loading...",
       "greeting": "Welcome, dear {name}.",
+      "greetingNoName": "Welcome.",
       "descriptionWithCompany": "This is a personalised corporate instance for {name}, {company}.",
       "descriptionNoCompany": "This is a personalised corporate instance for {name}.",
+      "descriptionCompanyOnly": "This is a personalised corporate instance for {company}.",
+      "descriptionGeneric": "This is a personalised corporate instance.",
       "confirmText": "By continuing, you confirm the use in accordance with the declaration of intent. Nice to have you here.",
       "declarationText": "I hereby declare my consent to use this personalised corporate instance of BryteArk AG. I confirm that the contents of this page are made available to me exclusively for personal, confidential use. Sharing or reproducing the provided information, files or data with third parties is not permitted without the express written consent of BryteArk AG. I acknowledge that my access is logged and applies exclusively to the purpose stated herein. The use of this instance is in accordance with the principles of the GDPR and European data protection law.",
       "checkboxLabel": "I have read the declaration of intent and agree to it. I confirm that I am authorised to access this personalised corporate instance.",

@@ -22,7 +22,7 @@
 
       <!-- Card area: flex-1 so it fills exactly the space below the header -->
       <div class="flex-1 flex items-center justify-center px-4 pt-36">
-        <div class="w-full container">
+        <div class="w-full max-w-3xl mx-auto">
 
           <!-- ── NDA Card ──
                bg-midnight-blue is SOLID — no opacity class on this element.
@@ -54,21 +54,32 @@
             <!-- ── NDA Content ── -->
             <template v-else-if="corporateData">
 
-              <!-- Personalised greeting -->
+              <!-- Greeting: personalised or default when no client name -->
               <h2 class="text-clean-white text-2xl font-bold text-center mb-3 leading-snug">
-                {{ $t('corporate.nda.greeting', { name: corporateData.client_name }) }}
+                <template v-if="hasClientName">
+                  {{ $t('corporate.nda.greeting', { name: clientDisplayName }) }}
+                </template>
+                <template v-else>
+                  {{ $t('corporate.nda.greetingNoName') }}
+                </template>
               </h2>
 
-              <!-- Instance description -->
+              <!-- Instance description (name / company optional) -->
               <p class="text-clean-white/75 text-sm text-center leading-relaxed mb-1">
-                <span v-if="corporateData.client_company">
+                <span v-if="hasClientName && hasClientCompany">
                   {{ $t('corporate.nda.descriptionWithCompany', {
-                    name: corporateData.client_name,
-                    company: corporateData.client_company,
+                    name: clientDisplayName,
+                    company: clientCompanyDisplay,
                   }) }}
                 </span>
+                <span v-else-if="hasClientName && !hasClientCompany">
+                  {{ $t('corporate.nda.descriptionNoCompany', { name: clientDisplayName }) }}
+                </span>
+                <span v-else-if="!hasClientName && hasClientCompany">
+                  {{ $t('corporate.nda.descriptionCompanyOnly', { company: clientCompanyDisplay }) }}
+                </span>
                 <span v-else>
-                  {{ $t('corporate.nda.descriptionNoCompany', { name: corporateData.client_name }) }}
+                  {{ $t('corporate.nda.descriptionGeneric') }}
                 </span>
               </p>
 
@@ -171,6 +182,11 @@ const { data: instanceResponse, pending, error: fetchError } = await useFetch<{
 
 const corporateData = computed(() => instanceResponse.value?.data ?? null)
 
+const clientDisplayName = computed(() => corporateData.value?.client_name?.trim() ?? '')
+const clientCompanyDisplay = computed(() => corporateData.value?.client_company?.trim() ?? '')
+const hasClientName = computed(() => clientDisplayName.value.length > 0)
+const hasClientCompany = computed(() => clientCompanyDisplay.value.length > 0)
+
 // ── If NDA is already accepted, redirect to homepage ─────────────────────────
 watchEffect(() => {
   if (corporateData.value?.nda_accepted) {
@@ -215,10 +231,10 @@ async function handleAccept() {
 
 // ── Page meta ─────────────────────────────────────────────────────────────────
 useHead({
-  title: computed(() =>
-    corporateData.value
-      ? `${t('corporate.nda.pageTitle')} — ${corporateData.value.client_name}`
-      : 'BryteArk Corporate',
-  ),
+  title: computed(() => {
+    if (!corporateData.value) return 'BryteArk Corporate'
+    const name = corporateData.value.client_name?.trim()
+    return name ? `${t('corporate.nda.pageTitle')} — ${name}` : t('corporate.nda.pageTitle')
+  }),
 })
 </script>

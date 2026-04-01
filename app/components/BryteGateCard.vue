@@ -18,9 +18,14 @@
     <!-- ── Corporate Mode ── -->
     <template v-if="corporateMode">
 
-      <!-- Personalised greeting -->
+      <!-- Personalised greeting (client name optional) -->
       <p class="text-clean-white/70 text-[11px] text-center leading-relaxed mb-3 px-2">
-        {{ $t('corporate.card.greeting', { name: clientFirstName, manager: managerFirstName }) }}
+        <template v-if="clientFirstName">
+          {{ $t('corporate.card.greeting', { name: clientFirstName, manager: managerDisplayName }) }}
+        </template>
+        <template v-else>
+          {{ $t('corporate.card.greetingNoClient', { manager: managerDisplayName }) }}
+        </template>
       </p>
 
       <!-- Manager name row (read-only, styled like an input) -->
@@ -73,9 +78,19 @@ const props = defineProps<{
   managerName?: string
 }>()
 
-// Derived first names for the greeting
-const clientFirstName = computed(() => props.clientName?.split(' ')[0] ?? '')
-const managerFirstName = computed(() => props.managerName?.split(' ')[0] ?? '')
+const { t } = useI18n()
+
+// First token of client name (empty when optional client name omitted)
+const clientFirstName = computed(() => {
+  const n = props.clientName?.trim()
+  return n ? n.split(' ')[0]! : ''
+})
+
+const managerFirstName = computed(() => props.managerName?.trim()?.split(' ')[0] ?? '')
+
+const managerDisplayName = computed(() =>
+  managerFirstName.value ? managerFirstName.value : t('corporate.card.managerFallback'),
+)
 
 // ── Token input state (default mode only) ────────────────────────────────────
 const token = ref('')

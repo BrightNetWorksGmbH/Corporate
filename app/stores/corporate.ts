@@ -31,7 +31,8 @@ export interface ManagerInfo {
 export interface CorporateInstanceData {
   _id: string
   slug: string
-  client_name: string
+  /** Optional — may be null/omitted when manager did not set a client name */
+  client_name: string | null
   client_company: string | null
   client_logo_url: string | null
   nda_accepted: boolean
